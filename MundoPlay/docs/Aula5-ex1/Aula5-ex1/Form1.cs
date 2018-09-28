@@ -404,6 +404,11 @@ namespace Aula5_ex1
                 lblCaminho_Foto.Text = ofdFoto.FileName;
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

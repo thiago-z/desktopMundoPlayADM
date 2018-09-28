@@ -9,3 +9,17 @@ C:\Users\thiago.silva5\Desktop\programa_c#\MundoPlay\MundoPlay\obj\Debug\MundoPl
 C:\Users\thiago.silva5\Desktop\programa_c#\MundoPlay\MundoPlay\obj\Debug\MundoPlay.exe
 C:\Users\thiago.silva5\Desktop\programa_c#\MundoPlay\MundoPlay\obj\Debug\MundoPlay.pdb
 C:\Users\thiago.silva5\Desktop\programa_c#\MundoPlay\MundoPlay\obj\Debug\MundoPlay.usuario.resources
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\bin\Debug\MundoPlay.exe.config
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\bin\Debug\MundoPlay.exe
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\bin\Debug\MundoPlay.pdb
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.csprojAssemblyReference.cache
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.frmPrincipal.resources
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.login.resources
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.Properties.Resources.resources
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.usuario.resources
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.csproj.GenerateResource.cache
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.csproj.CoreCompileInputs.cache
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.exe
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.pdb
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.CadastroHome.resources
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.CadastroFilme.resources
