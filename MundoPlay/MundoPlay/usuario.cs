@@ -45,5 +45,11 @@ namespace MundoPlay
             CadastroHome cadastroHome = new CadastroHome();
             cadastroHome.ShowDialog();
         }
+
+        private void usuario_Load(object sender, EventArgs e)
+        {
+            nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
+            admUserLogado.Text = MundoPlay.Program.admUsuario;
+        }
     }
 }

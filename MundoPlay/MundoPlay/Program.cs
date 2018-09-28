@@ -6,8 +6,13 @@ using System.Windows.Forms;
 
 namespace MundoPlay
 {
-    static class Program
+    public static class Program
     {
+
+        public static string nomeUsuario = "";
+        public static string senhaUsuario = "";
+        public static string admUsuario = "";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

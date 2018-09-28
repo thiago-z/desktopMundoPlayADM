@@ -11,6 +11,8 @@ using System.Data.SqlClient;
 
 namespace MundoPlay
 {
+
+
     public partial class login : Form
     {
 
@@ -18,7 +20,7 @@ namespace MundoPlay
         String conexao;
         private void conectar()
         {
-            conexao = "Data Source=DESKTOP-NBJI51Q;Initial Catalog=cinema_v7;Integrated Security=True";
+            conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoplay;Integrated Security=True";
         }
 
 
@@ -45,7 +47,7 @@ namespace MundoPlay
 
             /*vamos verificar login e senha e privilegios */
 
-            sql = "SELECT * FROM login WHERE usuario = " + txtUsuario + " AND senha = " + txtSenha + "";
+            sql = "SELECT * FROM login WHERE usuario = " + "'"+txtUsuario.Text+"'" + " AND senha = " + txtSenha.Text + "";
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = sql;
             cmd.CommandType = CommandType.Text;
@@ -57,14 +59,20 @@ namespace MundoPlay
             //verificando se o registro foi encontrado
             if (carregador.Read())
             {
-                string nomeUsuario = carregador["nome"].ToString();
-                string webmaster = carregador["webmaster"].ToString();
+                MundoPlay.Program.nomeUsuario = carregador["nome"].ToString();
+                MundoPlay.Program.admUsuario = carregador["webmaster"].ToString();
+
+
+                //abrir tela do usuario
+                //instanciar
+                CadastroHome cadastroHome = new CadastroHome();
+                cadastroHome.ShowDialog();
+
+
             }
 
-            //abrir tela do usuario
-            //instanciar
-            CadastroHome cadastroHome = new CadastroHome();
-            cadastroHome.ShowDialog();
+
+            
 
 
         }

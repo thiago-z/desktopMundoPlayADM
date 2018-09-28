@@ -48,3 +48,5 @@ C:\Users\andre.osousa\Documents\Aula5-ex1\Aula5-ex1\obj\Debug\Aula5_ex1.Form3.re
 C:\Users\thiago.silva5\Desktop\Aula5-ex1\Aula5-ex1\bin\Debug\Aula5-ex1.exe.config
 C:\Users\thiago.silva5\Desktop\Aula5-ex1\Aula5-ex1\obj\Debug\Aula5-ex1.exe
 C:\Users\thiago.silva5\Desktop\Aula5-ex1\Aula5-ex1\obj\Debug\Aula5-ex1.pdb
+C:\Users\thiago.silva5\Desktop\programa_c#\MundoPlay\docs\Aula5-ex1\Aula5-ex1\bin\Debug\Aula5-ex1.exe.config
+C:\Users\thiago.silva5\Desktop\programa_c#\MundoPlay\docs\Aula5-ex1\Aula5-ex1\obj\Debug\Aula5-ex1.pdb

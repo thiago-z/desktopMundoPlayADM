@@ -30,5 +30,11 @@ namespace MundoPlay
             CadastroFilme cadastroFilme = new CadastroFilme();
             cadastroFilme.ShowDialog();
         }
+
+        private void CadastroHome_Load(object sender, EventArgs e)
+        {
+            nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
+            admUserLogado.Text = MundoPlay.Program.admUsuario;
+        }
     }
 }
