@@ -110,7 +110,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.BackColor = System.Drawing.Color.Brown;
+            this.btnSair.BackColor = System.Drawing.Color.DimGray;
             this.btnSair.Location = new System.Drawing.Point(364, 646);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(66, 42);

@@ -33,8 +33,20 @@ namespace MundoPlay
 
         private void CadastroHome_Load(object sender, EventArgs e)
         {
+
+            String admOK = MundoPlay.Program.admUsuario;
+
+            if (admOK == "1")
+            {
+                admUserLogado.Text = MundoPlay.Program.privilegioADM;
+            }
+            else
+            {
+                admUserLogado.Text = "Commun";
+            }
+
             nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
-            admUserLogado.Text = MundoPlay.Program.admUsuario;
+
         }
     }
 }

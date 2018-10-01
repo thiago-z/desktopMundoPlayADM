@@ -20,7 +20,7 @@ namespace MundoPlay
         String conexao;
         private void conectar()
         {
-            conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoplay;Integrated Security=True";
+            conexao = "Data Source=DESKTOP-NBJI51Q;Initial Catalog=mundoPlay;Integrated Security=True";
         }
 
 
@@ -65,8 +65,8 @@ namespace MundoPlay
 
                 //abrir tela do usuario
                 //instanciar
-                CadastroHome cadastroHome = new CadastroHome();
-                cadastroHome.ShowDialog();
+                usuario usuarioHome = new usuario();
+                usuarioHome.ShowDialog();
 
 
             }
