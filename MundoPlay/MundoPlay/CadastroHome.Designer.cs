@@ -56,20 +56,20 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(810, 65);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Sienna;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.admUserLogado);
             this.panel2.Controls.Add(this.nomeUserLogado);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(537, 3);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 57);
             this.panel2.TabIndex = 1;
@@ -101,6 +101,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(59, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -112,7 +113,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(51, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,7 +124,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(8, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,18 +135,19 @@
             // 
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
             this.btnVoltar.Location = new System.Drawing.Point(716, 432);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(86, 28);
             this.btnVoltar.TabIndex = 4;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnSair
             // 
             this.btnSair.ForeColor = System.Drawing.Color.Black;
             this.btnSair.Location = new System.Drawing.Point(8, 432);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(2);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 28);
             this.btnSair.TabIndex = 3;
@@ -171,7 +173,7 @@
             this.panel3.Controls.Add(this.btnCadastrarGame);
             this.panel3.Controls.Add(this.btnConsultarSerie);
             this.panel3.Location = new System.Drawing.Point(108, 222);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(594, 83);
             this.panel3.TabIndex = 8;
@@ -182,7 +184,7 @@
             this.btnCadastroFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastroFilme.ForeColor = System.Drawing.SystemColors.Window;
             this.btnCadastroFilme.Location = new System.Drawing.Point(11, 18);
-            this.btnCadastroFilme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCadastroFilme.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastroFilme.Name = "btnCadastroFilme";
             this.btnCadastroFilme.Size = new System.Drawing.Size(149, 49);
             this.btnCadastroFilme.TabIndex = 3;
@@ -196,7 +198,7 @@
             this.btnCadastrarGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarGame.ForeColor = System.Drawing.Color.White;
             this.btnCadastrarGame.Location = new System.Drawing.Point(435, 18);
-            this.btnCadastrarGame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCadastrarGame.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastrarGame.Name = "btnCadastrarGame";
             this.btnCadastrarGame.Size = new System.Drawing.Size(149, 49);
             this.btnCadastrarGame.TabIndex = 5;
@@ -209,7 +211,7 @@
             this.btnConsultarSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarSerie.ForeColor = System.Drawing.Color.White;
             this.btnConsultarSerie.Location = new System.Drawing.Point(223, 18);
-            this.btnConsultarSerie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultarSerie.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultarSerie.Name = "btnConsultarSerie";
             this.btnConsultarSerie.Size = new System.Drawing.Size(149, 49);
             this.btnConsultarSerie.TabIndex = 4;
@@ -229,7 +231,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CadastroHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroHome";

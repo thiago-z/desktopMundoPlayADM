@@ -57,14 +57,65 @@ namespace MundoPlay
             else
             {
                 admUserLogado.Text = "Commun";
+                btnGerenciar.Enabled = false;
             }
 
-            nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
+            //URL da imagem
+            String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
 
-            
+            nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
+            fotoUserLogado.ImageLocation = urlFoto + MundoPlay.Program.fotoUsuario;
+
            
 
-            
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnGerenciar_Click(object sender, EventArgs e)
+        {
+            //abrir tela do usuario
+            //instanciar
+            GerenciarHome admHome = new GerenciarHome();
+            admHome.ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void admUserLogado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nomeUserLogado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

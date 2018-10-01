@@ -20,7 +20,7 @@ namespace MundoPlay
         String conexao;
         private void conectar()
         {
-            conexao = "Data Source=DESKTOP-NBJI51Q;Initial Catalog=mundoPlay;Integrated Security=True";
+            conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoPlay;Integrated Security=True";
         }
 
 
@@ -61,7 +61,7 @@ namespace MundoPlay
             {
                 MundoPlay.Program.nomeUsuario = carregador["nome"].ToString();
                 MundoPlay.Program.admUsuario = carregador["webmaster"].ToString();
-
+                MundoPlay.Program.fotoUsuario = carregador["imgAutor"].ToString();
 
                 //abrir tela do usuario
                 //instanciar

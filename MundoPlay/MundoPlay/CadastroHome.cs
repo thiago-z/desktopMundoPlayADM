@@ -48,5 +48,10 @@ namespace MundoPlay
             nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
 
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

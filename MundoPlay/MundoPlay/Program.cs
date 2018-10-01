@@ -15,6 +15,9 @@ namespace MundoPlay
         public static string senhaUsuario = "";
         //Puxa se usuário tem privilegios adm
         public static string admUsuario = "";
+        //Puxa foto do usuário
+        public static string fotoUsuario = "";
+
 
         public static string privilegioADM = "Administrador";
 
