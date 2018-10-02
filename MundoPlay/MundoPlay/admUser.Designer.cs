@@ -59,7 +59,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1215, 100);
+            this.panel1.Size = new System.Drawing.Size(1203, 100);
             this.panel1.TabIndex = 1;
             // 
             // panel2
@@ -69,10 +69,11 @@
             this.panel2.Controls.Add(this.nomeUserLogado);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.fotoUserLogado);
-            this.panel2.Location = new System.Drawing.Point(801, 5);
+            this.panel2.Location = new System.Drawing.Point(795, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(398, 88);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // admUserLogado
             // 
@@ -231,6 +232,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 720);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
