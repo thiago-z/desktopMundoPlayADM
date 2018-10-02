@@ -102,7 +102,7 @@
             this.button1.Location = new System.Drawing.Point(42, 551);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(390, 46);
+            this.button1.Size = new System.Drawing.Size(400, 50);
             this.button1.TabIndex = 17;
             this.button1.Text = "Entrar";
             this.button1.UseVisualStyleBackColor = false;

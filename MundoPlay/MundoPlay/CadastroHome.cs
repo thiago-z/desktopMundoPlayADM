@@ -45,8 +45,14 @@ namespace MundoPlay
                 admUserLogado.Text = "Commun";
             }
 
-            nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
+            //URL da imagem Senac
+            //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
+            //URL da imagem Casa
+            String urlFoto = "C:/Users/storn/Documents/C#/desktopMundoPlayADM/MundoPlay/imagens/usuarios/";
 
+
+            nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
+            fotoUserLogado.ImageLocation = urlFoto + MundoPlay.Program.fotoUsuario;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

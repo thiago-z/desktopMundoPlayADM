@@ -48,11 +48,11 @@ namespace MundoPlay
 
         private void usuario_Load(object sender, EventArgs e)
         {
-            String admOK = MundoPlay.Program.admUsuario;
+            String admOK = Program.admUsuario;
 
             if(admOK == "1")
             {
-                admUserLogado.Text = MundoPlay.Program.privilegioADM;
+                admUserLogado.Text = Program.privilegioADM;
             }
             else
             {
@@ -60,8 +60,10 @@ namespace MundoPlay
                 btnGerenciar.Enabled = false;
             }
 
-            //URL da imagem
-            String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
+            //URL da imagem Senac
+            //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
+            //URL da imagem Casa
+            String urlFoto = "C:/Users/storn/Documents/C#/desktopMundoPlayADM/MundoPlay/imagens/usuarios/";
 
             nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
             fotoUserLogado.ImageLocation = urlFoto + MundoPlay.Program.fotoUsuario;

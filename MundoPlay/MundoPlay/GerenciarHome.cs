@@ -41,8 +41,11 @@ namespace MundoPlay
                 admUserLogado.Text = "Commun";
             }
 
-            //URL da imagem
-            String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
+            //URL da imagem Senac
+            //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
+            //URL da imagem Casa
+            String urlFoto = "C:/Users/storn/Documents/C#/desktopMundoPlayADM/MundoPlay/imagens/usuarios/";
+
 
             nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
             fotoUserLogado.ImageLocation = urlFoto + MundoPlay.Program.fotoUsuario;
@@ -52,6 +55,16 @@ namespace MundoPlay
 
         private void btnAdmTitulos_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnAdmUsuarios_Click(object sender, EventArgs e)
+        {
+            //Ao clicar aqui será direcionado ao form de adm de usuarios:
+            //Adicionar, remover ou alterar users
+
+            admUser admUsuario = new admUser();
+            admUsuario.ShowDialog();
 
         }
     }

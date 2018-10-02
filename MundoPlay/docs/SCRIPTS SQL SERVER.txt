@@ -1,0 +1,141 @@
+//CRIAR BANCO DE DADOS
+
+CREATE database bd_faculdade on primary
+(NAME = bd_faculdade,
+FILENAME = 'C:\Thiago_S\SqL_Server\bd_faculdade.mdf',
+SIZE = 6MB,
+MAXSIZE = 20MB,
+FILEGROWTH = 10%)
+
+LOG ON (
+NAME = bd_faculdade_log,
+FILENAME = 'C:\Thiago_S\SqL_Server\bd_faculdade.ldf',
+SIZE = 1MB,
+FILEGROWTH = 1MB)
+GO
+
+
+
+//CRIAR TABELA COM CHAVE PRIMARIA
+
+CREATE TABLE Departamento (
+    Cod_Departamento int NOT NULL identity,
+    Nome_Departamento VARCHAR(20) NOT NULL,
+    PRIMARY KEY (Cod_Departamento)
+); 
+
+
+
+//CRIAR TABELA COM CHAVE PRIMARIA E CHAVE ESTRANGEIRA
+
+CREATE TABLE Professor (
+    Cod_Professor int NOT NULL identity,
+    Nome_Professor VARCHAR(20) NOT NULL,
+	Sobrenome_Professor VARCHAR(50) NOT NULL,
+	Cod_Departamento int,
+	Estatus bit NOT NULL,
+    PRIMARY KEY (Cod_Professor),
+	FOREIGN KEY (Cod_Departamento) REFERENCES Departamento(Cod_Departamento)
+); 
+
+
+
+
+//CRIAR TABELA COM CHAVE PRIMARIA E QUE TAMBÉM É CHAVE ESTRANGEIRA
+
+
+CREATE TABLE Disciplina (
+    Cod_Disciplina int NOT NULL identity,
+    Nome_Disciplina varchar(20) NOT NULL,
+	Carga_Horaria int,
+	Descricao varchar(50),
+	Num_Alunos int,
+	Cod_Departamento int,
+    PRIMARY KEY (Cod_Disciplina),
+	FOREIGN KEY (Cod_Disciplina) REFERENCES Disciplina(Cod_Disciplina),
+	FOREIGN KEY (Cod_Departamento) REFERENCES Departamento(Cod_Departamento)
+); 
+
+
+
+
+//TABELA ASSOCIATIVA COM MAIS DE UMA TABELA CHAVE PRIMARIA E QUE TAMBÉM É CHAVE ESTRANGEIRA
+
+CREATE TABLE Curso_Disciplina (
+    Cod_Curso int,
+    Cod_Disciplina int,
+	PRIMARY KEY (Cod_Curso, Cod_Disciplina),
+	FOREIGN KEY (Cod_Curso) REFERENCES Curso(Cod_Curso),
+	FOREIGN KEY (Cod_Disciplina) REFERENCES Disciplina(Cod_Disciplina)
+); 
+
+
+######################################################################################################################
+//CRIAR INSERTS
+
+
+//INSERTS COM TABELA COM CHAVES PRIMARIAS E ESTRANGEIRAS
+
+INSERT INTO [dbo].[Departamento]
+           ([Nome_Departamento])
+     VALUES
+           ('TI'),('Humanas')
+
+
+INSERT INTO [dbo].[Curso]
+           ([Nome_Curso]
+           ,[Cod_Departamento]
+           ,[Estatus])
+     VALUES
+           ('Técnico Informática',
+           '1',
+           '1'),
+		   
+		   ('Filosofia',
+           '2',
+           '1')
+
+
+INSERT INTO [dbo].[Aluno]
+           ([Nome_Aluno]
+           ,[Sobrenome_Aluno]
+           ,[CPF]
+           ,[Sexo]
+           ,[Nome_Pai]
+           ,[Nome_Mae]
+           ,[Email]
+           ,[Whatsapp]
+           ,[Cod_Turma]
+           ,[Cod_Curso]
+           ,[Estatus])
+     VALUES
+           ('Thiago',
+           'Silva',
+           '12345678912',
+           'M',
+           'Fulano',
+           'Rosa Maria Silva',
+           'stornwild@yahoo.com.br',
+           '11960606060',
+           6,
+           1,
+           1)
+
+
+
+
+
+//INSERT COM COLUNAS DATE
+
+INSERT INTO [dbo].[Turma]
+           ([Periodo]
+           ,[Num_alunos]
+           ,[Data_Inicio]
+           ,[Data_Fim]
+           ,[Cod_Curso])
+     VALUES
+           ('Manhã',
+           30,
+           '2016-06-20',
+           '2018-10-20',
+           1)

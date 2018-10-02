@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admCadastrarUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admCadastrarUser.Designer.cs">
+      <DependentUpon>admCadastrarUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admConsultarUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admConsultarUser.Designer.cs">
+      <DependentUpon>admConsultarUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admUser.Designer.cs">
+      <DependentUpon>admUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastroFilme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,18 +96,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="teste.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="teste.Designer.cs">
-      <DependentUpon>teste.cs</DependentUpon>
-    </Compile>
     <Compile Include="usuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="usuario.Designer.cs">
       <DependentUpon>usuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="admCadastrarUser.resx">
+      <DependentUpon>admCadastrarUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admConsultarUser.resx">
+      <DependentUpon>admConsultarUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admUser.resx">
+      <DependentUpon>admUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroFilme.resx">
       <DependentUpon>CadastroFilme.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,9 +135,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="teste.resx">
-      <DependentUpon>teste.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="usuario.resx">
       <DependentUpon>usuario.cs</DependentUpon>
     </EmbeddedResource>

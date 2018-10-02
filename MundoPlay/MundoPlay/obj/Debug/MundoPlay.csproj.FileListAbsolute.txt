@@ -27,3 +27,7 @@ C:\Users\thiago.silva5\Desktop\programa_c#\MundoPlay\MundoPlay\obj\Debug\MundoPl
 C:\Users\thiago.silva5\Desktop\programa_c#\MundoPlay\MundoPlay\obj\Debug\MundoPlay.csprojResolveAssemblyReference.cache
 C:\Users\thiago.silva5\Desktop\programa_c#\MundoPlay\MundoPlay\obj\Debug\MundoPlay.teste.resources
 C:\Users\thiago.silva5\Desktop\programa_c#\MundoPlay\MundoPlay\obj\Debug\MundoPlay.GerenciarHome.resources
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.GerenciarHome.resources
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.admUser.resources
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.admCadastrarUser.resources
+C:\Users\storn\Documents\C#\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.admConsultarUser.resources
