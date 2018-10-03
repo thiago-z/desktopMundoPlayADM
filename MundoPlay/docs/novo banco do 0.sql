@@ -39,24 +39,23 @@ CREATE TABLE noticia_login (
   noticia int,
   usuario int
   PRIMARY KEY (noticia, usuario),
-  FOREIGN KEY (noticia) REFERENCES noticias(idnoticias),
-  FOREIGN KEY (usuario) REFERENCES login(idlogin)
+  FOREIGN KEY (noticia) REFERENCES noticias(idnoticias) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (usuario) REFERENCES login(idlogin) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
 -- Tabela de filmes
 
-CREATE TABLE [filmes](
-	[idfilmes] [int] NOT NULL identity,
-	[titulo] [varchar](100) NULL,
-	[titulo_original] [varchar](100) NULL,
-	[elenco] [varchar](max) NULL,
-	[sinopse] [varchar](max) NULL,
-	[duracao] [int] NULL,
-	[poster] [varchar](45) NULL,
-	[trailer] [varchar](45) NULL,
-	[validar] [varchar](3) NULL
-	PRIMARY KEY (idfilmes)
+CREATE TABLE filmes (
+	idfilmes int NOT NULL identity PRIMARY KEY,
+	titulo varchar(100) NULL,
+	titulo_original varchar(100) NULL,
+	elenco text NULL,
+	sinopse text NULL,
+	duracao int NULL,
+	poster varchar(45) NULL,
+	trailer varchar(45) NULL,
+	validar varchar(3) NULL
 )
 
 
@@ -168,8 +167,8 @@ CREATE TABLE filme_lancamento (
     filme int,
     lancamento int,
 	PRIMARY KEY (filme, lancamento),
-	FOREIGN KEY (filme) REFERENCES filmes(idfilmes),
-	FOREIGN KEY (lancamento) REFERENCES lancamentos(idlancamentos)
+	FOREIGN KEY (filme) REFERENCES filmes(idfilmes) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (lancamento) REFERENCES lancamentos(idlancamentos) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -179,8 +178,8 @@ CREATE TABLE serie_lancamento (
     serie int,
     lancamento int,
 	PRIMARY KEY (serie, lancamento),
-	FOREIGN KEY (serie) REFERENCES series(idseries),
-	FOREIGN KEY (lancamento) REFERENCES lancamentos(idlancamentos)
+	FOREIGN KEY (serie) REFERENCES series(idseries) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (lancamento) REFERENCES lancamentos(idlancamentos) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -190,8 +189,8 @@ CREATE TABLE game_lancamento (
     game int,
     lancamento int,
 	PRIMARY KEY (game, lancamento),
-	FOREIGN KEY (game) REFERENCES games(idgames),
-	FOREIGN KEY (lancamento) REFERENCES lancamentos(idlancamentos)
+	FOREIGN KEY (game) REFERENCES games(idgames) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (lancamento) REFERENCES lancamentos(idlancamentos) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -201,8 +200,8 @@ CREATE TABLE game_console (
   game int,
   console int
   PRIMARY KEY (game, console),
-  FOREIGN KEY (game) REFERENCES games(idgames),
-  FOREIGN KEY (console) REFERENCES consoles(idconsoles)
+  FOREIGN KEY (game) REFERENCES games(idgames) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (console) REFERENCES consoles(idconsoles) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
@@ -212,8 +211,8 @@ CREATE TABLE game_diretor (
   game int,
   diretor int
   PRIMARY KEY (game, diretor),
-  FOREIGN KEY (game) REFERENCES games(idgames),
-  FOREIGN KEY (diretor) REFERENCES diretores(iddiretores)
+  FOREIGN KEY (game) REFERENCES games(idgames) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (diretor) REFERENCES diretores(iddiretores) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
@@ -223,8 +222,8 @@ CREATE TABLE game_genero (
   game int,
   genero int
   PRIMARY KEY (game, genero),
-  FOREIGN KEY (game) REFERENCES games(idgames),
-  FOREIGN KEY (genero) REFERENCES generos(idgeneros)
+  FOREIGN KEY (game) REFERENCES games(idgames) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (genero) REFERENCES generos(idgeneros) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
@@ -234,8 +233,8 @@ CREATE TABLE game_desenvolvedora (
   game int,
   desenvolvedora int
   PRIMARY KEY (game, desenvolvedora),
-  FOREIGN KEY (game) REFERENCES games(idgames),
-  FOREIGN KEY (desenvolvedora) REFERENCES desenvolvedoras(iddesenvolvedoras)
+  FOREIGN KEY (game) REFERENCES games(idgames) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (desenvolvedora) REFERENCES desenvolvedoras(iddesenvolvedoras) ON DELETE CASCADE ON UPDATE CASCADE
 ) 
 
 
@@ -245,8 +244,8 @@ CREATE TABLE game_publicadora (
   game int,
   publicadora int
   PRIMARY KEY (game, publicadora),
-  FOREIGN KEY (game) REFERENCES games(idgames),
-  FOREIGN KEY (publicadora) REFERENCES publicadoras(idpublicadoras)
+  FOREIGN KEY (game) REFERENCES games(idgames) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (publicadora) REFERENCES publicadoras(idpublicadoras) ON DELETE CASCADE ON UPDATE CASCADE
 ) 
 
 
@@ -257,8 +256,11 @@ CREATE TABLE filme_genero (
     filme int,
     genero int,
 	PRIMARY KEY (filme, genero),
-	FOREIGN KEY (filme) REFERENCES filmes(idfilmes),
-	FOREIGN KEY (genero) REFERENCES generos(idgeneros)
+	FOREIGN KEY (filme) REFERENCES filmes(idfilmes) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (genero) REFERENCES generos(idgeneros) ON DELETE CASCADE ON UPDATE CASCADE
+
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
 ); 
 
 
@@ -268,8 +270,8 @@ CREATE TABLE serie_genero (
     serie int,
     genero int,
 	PRIMARY KEY (serie, genero),
-	FOREIGN KEY (serie) REFERENCES series(idseries),
-	FOREIGN KEY (genero) REFERENCES generos(idgeneros)
+	FOREIGN KEY (serie) REFERENCES series(idseries) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (genero) REFERENCES generos(idgeneros) ON DELETE CASCADE ON UPDATE CASCADE
 ); 
 
 
@@ -280,8 +282,8 @@ CREATE TABLE filme_diretor (
     filme int,
     diretor int,
 	PRIMARY KEY (filme, diretor),
-	FOREIGN KEY (filme) REFERENCES filmes(idfilmes),
-	FOREIGN KEY (diretor) REFERENCES diretores(iddiretores)
+	FOREIGN KEY (filme) REFERENCES filmes(idfilmes) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (diretor) REFERENCES diretores(iddiretores) ON DELETE CASCADE ON UPDATE CASCADE
 ); 
 
 
@@ -300,8 +302,8 @@ CREATE TABLE filme_midia (
   filme int,
   midia int
   PRIMARY KEY (filme, midia),
-  FOREIGN KEY (filme) REFERENCES filmes(idfilmes),
-  FOREIGN KEY (midia) REFERENCES midias(idmidias)
+  FOREIGN KEY (filme) REFERENCES filmes(idfilmes) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (midia) REFERENCES midias(idmidias) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
@@ -311,8 +313,8 @@ CREATE TABLE game_midia (
   game int,
   midia int
   PRIMARY KEY (game, midia),
-  FOREIGN KEY (game) REFERENCES games(idgames),
-  FOREIGN KEY (midia) REFERENCES midias(idmidias)
+  FOREIGN KEY (game) REFERENCES games(idgames) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (midia) REFERENCES midias(idmidias) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
@@ -322,8 +324,8 @@ CREATE TABLE serie_midia (
   serie int,
   midia int
   PRIMARY KEY (serie, midia),
-  FOREIGN KEY (serie) REFERENCES series(idseries),
-  FOREIGN KEY (midia) REFERENCES midias(idmidias)
+  FOREIGN KEY (serie) REFERENCES series(idseries) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (midia) REFERENCES midias(idmidias) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
@@ -342,8 +344,8 @@ CREATE TABLE filme_pais (
   filme int,
   pais int
   PRIMARY KEY (filme, pais),
-  FOREIGN KEY (filme) REFERENCES filmes(idfilmes),
-  FOREIGN KEY (pais) REFERENCES paises(idpaises)
+  FOREIGN KEY (filme) REFERENCES filmes(idfilmes) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (pais) REFERENCES paises(idpaises) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
@@ -353,8 +355,8 @@ CREATE TABLE serie_pais (
   serie int,
   pais int
   PRIMARY KEY (serie, pais),
-  FOREIGN KEY (serie) REFERENCES series(idseries),
-  FOREIGN KEY (pais) REFERENCES paises(idpaises)
+  FOREIGN KEY (serie) REFERENCES series(idseries) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (pais) REFERENCES paises(idpaises) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
@@ -364,8 +366,8 @@ CREATE TABLE game_pais (
   game int,
   pais int
   PRIMARY KEY (game, pais),
-  FOREIGN KEY (game) REFERENCES games(idgames),
-  FOREIGN KEY (pais) REFERENCES paises(idpaises)
+  FOREIGN KEY (game) REFERENCES games(idgames) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (pais) REFERENCES paises(idpaises) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
@@ -375,8 +377,8 @@ CREATE TABLE noticia_evento (
   noticia int,
   evento int
   PRIMARY KEY (noticia, evento),
-  FOREIGN KEY (noticia) REFERENCES noticias(idnoticias),
-  FOREIGN KEY (evento) REFERENCES eventos(ideventos)
+  FOREIGN KEY (noticia) REFERENCES noticias(idnoticias) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (evento) REFERENCES eventos(ideventos) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
