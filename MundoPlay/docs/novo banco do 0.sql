@@ -1,6 +1,3 @@
-use mundoPlay2
-
-
 
 -- Tabela de login
 
@@ -258,9 +255,6 @@ CREATE TABLE filme_genero (
 	PRIMARY KEY (filme, genero),
 	FOREIGN KEY (filme) REFERENCES filmes(idfilmes) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (genero) REFERENCES generos(idgeneros) ON DELETE CASCADE ON UPDATE CASCADE
-
-	ON DELETE CASCADE
-	ON UPDATE CASCADE
 ); 
 
 

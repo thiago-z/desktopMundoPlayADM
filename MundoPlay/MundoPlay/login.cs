@@ -22,9 +22,9 @@ namespace MundoPlay
         {
             //Habilitar e dasabilitar conexoes
             //Cenexão Casa
-            //conexao = "Data Source=DESKTOP-NBJI51Q;Initial Catalog=mundoPlay2;Integrated Security=True";
+            conexao = "Data Source=DESKTOP-NBJI51Q;Initial Catalog=mundoPlay;Integrated Security=True";
             //Cenexão Senac
-            conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoPlay;Integrated Security=True";
+            //conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoPlay;Integrated Security=True";
         }
 
 
