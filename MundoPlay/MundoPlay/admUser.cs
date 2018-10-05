@@ -163,14 +163,26 @@ namespace MundoPlay
             String sql;
             string aspas = "'";
 
+            int administrador=0;
 
-            sql = "INSERT INTO login (nome,email,usuario,senha,imgAutor)";
+            //Verificar se user será adm
+            if (rbtnADM.Text == "SIM")
+            {
+                adminintrador = 1;
+            }
+
+
+
+
+
+            sql = "INSERT INTO login (nome,email,usuario,senha,imgAutor,webmaster)";
             sql = sql + "VALUES (";
             sql = sql + aspas + txtNomeUser.Text + aspas + ",";
             sql = sql + aspas + txtEmailUser.Text + aspas + ",";
             sql = sql + aspas + txtUser.Text + aspas + ",";
             sql = sql + aspas + txtSenhaUser.Text + aspas + ",";
-            sql = sql + aspas + nomeFoto;
+            sql = sql + aspas + nomeFoto + aspas + ",";
+            sql = sql + aspas + administrador;
             sql = sql + aspas + ")";
 
             SqlCommand cmd = new SqlCommand();

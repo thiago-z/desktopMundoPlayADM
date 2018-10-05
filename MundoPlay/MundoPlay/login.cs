@@ -22,9 +22,9 @@ namespace MundoPlay
         {
             //Habilitar e dasabilitar conexoes
             //Cenexão Casa
-            conexao = "Data Source=DESKTOP-NBJI51Q;Initial Catalog=mundoPlay;Integrated Security=True";
+            //conexao = "Data Source=DESKTOP-NBJI51Q;Initial Catalog=mundoPlay;Integrated Security=True";
             //Cenexão Senac
-            //conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoPlay;Integrated Security=True";
+            conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoPlay;Integrated Security=True";
         }
 
 
@@ -49,7 +49,7 @@ namespace MundoPlay
             conn.Open();
             String sql;
 
-            /*vamos verificar login e senha e privilegios */
+            //vamos verificar login e senha e privilegios
 
             sql = "SELECT * FROM login WHERE usuario = " + "'"+txtUsuario.Text+"'" + " AND senha = " + txtSenha.Text + "";
             SqlCommand cmd = new SqlCommand();
@@ -60,24 +60,25 @@ namespace MundoPlay
             SqlDataReader carregador;
             //execução do comando
             carregador = cmd.ExecuteReader();
-            //verificando se o registro foi encontrado
-            if (carregador.Read())
-            {
-                MundoPlay.Program.nomeUsuario = carregador["nome"].ToString();
-                MundoPlay.Program.admUsuario = carregador["webmaster"].ToString();
-                MundoPlay.Program.fotoUsuario = carregador["imgAutor"].ToString();
-
-                //abrir tela do usuario
-                //instanciar
-                usuario usuarioHome = new usuario();
-                usuarioHome.ShowDialog();
-
-
-            }
-
-
+            //verificando se o registro foi encontrado     
             
+                if (carregador.Read())
+                {
+                    MundoPlay.Program.nomeUsuario = carregador["nome"].ToString();
+                    MundoPlay.Program.admUsuario = carregador["webmaster"].ToString();
+                    MundoPlay.Program.fotoUsuario = carregador["imgAutor"].ToString();
 
+                    //abrir tela do usuario
+                    //instanciar
+                    usuario usuarioHome = new usuario();
+                    usuarioHome.ShowDialog();
+
+
+                }
+            else
+            {
+                MessageBox.Show("Nome de usuário ou senha incorretos!");
+            }
 
         }
 

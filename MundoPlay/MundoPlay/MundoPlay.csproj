@@ -46,18 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admCadastrarUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="admCadastrarUser.Designer.cs">
-      <DependentUpon>admCadastrarUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="admConsultarUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="admConsultarUser.Designer.cs">
-      <DependentUpon>admConsultarUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="admUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,12 +90,6 @@
     <Compile Include="usuario.Designer.cs">
       <DependentUpon>usuario.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="admCadastrarUser.resx">
-      <DependentUpon>admCadastrarUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="admConsultarUser.resx">
-      <DependentUpon>admConsultarUser.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="admUser.resx">
       <DependentUpon>admUser.cs</DependentUpon>
     </EmbeddedResource>
