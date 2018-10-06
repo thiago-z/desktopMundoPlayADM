@@ -155,39 +155,51 @@
             // btnCadastro
             // 
             this.btnCadastro.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastro.ForeColor = System.Drawing.Color.White;
+            this.btnCadastro.ForeColor = System.Drawing.Color.Silver;
+            this.btnCadastro.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastro.Image")));
+            this.btnCadastro.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastro.Location = new System.Drawing.Point(16, 28);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(224, 75);
+            this.btnCadastro.Size = new System.Drawing.Size(220, 120);
             this.btnCadastro.TabIndex = 3;
             this.btnCadastro.Text = "Cadastrar";
+            this.btnCadastro.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastro.UseVisualStyleBackColor = false;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // btnConsultar
             // 
             this.btnConsultar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.ForeColor = System.Drawing.Color.Silver;
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnConsultar.Location = new System.Drawing.Point(334, 28);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(224, 75);
+            this.btnConsultar.Size = new System.Drawing.Size(220, 120);
             this.btnConsultar.TabIndex = 4;
             this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnGerenciar
             // 
             this.btnGerenciar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnGerenciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerenciar.ForeColor = System.Drawing.Color.White;
+            this.btnGerenciar.ForeColor = System.Drawing.Color.Silver;
+            this.btnGerenciar.Image = ((System.Drawing.Image)(resources.GetObject("btnGerenciar.Image")));
+            this.btnGerenciar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGerenciar.Location = new System.Drawing.Point(652, 28);
             this.btnGerenciar.Name = "btnGerenciar";
-            this.btnGerenciar.Size = new System.Drawing.Size(224, 75);
+            this.btnGerenciar.Size = new System.Drawing.Size(220, 120);
             this.btnGerenciar.TabIndex = 5;
             this.btnGerenciar.Text = "Gerenciar";
+            this.btnGerenciar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGerenciar.UseVisualStyleBackColor = false;
             this.btnGerenciar.Click += new System.EventHandler(this.btnGerenciar_Click);
             // 
@@ -196,9 +208,9 @@
             this.panel3.Controls.Add(this.btnCadastro);
             this.panel3.Controls.Add(this.btnGerenciar);
             this.panel3.Controls.Add(this.btnConsultar);
-            this.panel3.Location = new System.Drawing.Point(162, 405);
+            this.panel3.Location = new System.Drawing.Point(162, 355);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(891, 128);
+            this.panel3.Size = new System.Drawing.Size(891, 178);
             this.panel3.TabIndex = 6;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -206,7 +218,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label4.Location = new System.Drawing.Point(416, 262);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(426, 55);
@@ -226,7 +238,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "usuario";

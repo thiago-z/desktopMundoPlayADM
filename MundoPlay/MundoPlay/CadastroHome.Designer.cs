@@ -165,44 +165,49 @@
             this.panel3.Controls.Add(this.btnConsultarSerie);
             this.panel3.Location = new System.Drawing.Point(162, 342);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(891, 128);
+            this.panel3.Size = new System.Drawing.Size(891, 207);
             this.panel3.TabIndex = 8;
             // 
             // btnCadastroFilme
             // 
-            this.btnCadastroFilme.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCadastroFilme.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCadastroFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroFilme.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCadastroFilme.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCadastroFilme.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroFilme.Image")));
+            this.btnCadastroFilme.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastroFilme.Location = new System.Drawing.Point(16, 28);
             this.btnCadastroFilme.Name = "btnCadastroFilme";
-            this.btnCadastroFilme.Size = new System.Drawing.Size(224, 75);
+            this.btnCadastroFilme.Size = new System.Drawing.Size(220, 120);
             this.btnCadastroFilme.TabIndex = 3;
             this.btnCadastroFilme.Text = "Filmes";
+            this.btnCadastroFilme.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastroFilme.UseVisualStyleBackColor = false;
             this.btnCadastroFilme.Click += new System.EventHandler(this.btnCadastroFilme_Click);
             // 
             // btnCadastrarGame
             // 
-            this.btnCadastrarGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCadastrarGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnCadastrarGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarGame.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarGame.ForeColor = System.Drawing.Color.Green;
             this.btnCadastrarGame.Location = new System.Drawing.Point(652, 28);
             this.btnCadastrarGame.Name = "btnCadastrarGame";
-            this.btnCadastrarGame.Size = new System.Drawing.Size(224, 75);
+            this.btnCadastrarGame.Size = new System.Drawing.Size(220, 120);
             this.btnCadastrarGame.TabIndex = 5;
             this.btnCadastrarGame.Text = "Games";
+            this.btnCadastrarGame.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrarGame.UseVisualStyleBackColor = false;
             // 
             // btnConsultarSerie
             // 
-            this.btnConsultarSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultarSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnConsultarSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarSerie.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnConsultarSerie.Location = new System.Drawing.Point(334, 28);
             this.btnConsultarSerie.Name = "btnConsultarSerie";
-            this.btnConsultarSerie.Size = new System.Drawing.Size(224, 75);
+            this.btnConsultarSerie.Size = new System.Drawing.Size(220, 120);
             this.btnConsultarSerie.TabIndex = 4;
             this.btnConsultarSerie.Text = "Séries";
+            this.btnConsultarSerie.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConsultarSerie.UseVisualStyleBackColor = false;
             // 
             // CadastroHome
