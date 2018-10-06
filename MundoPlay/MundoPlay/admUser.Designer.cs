@@ -65,6 +65,7 @@
             this.btnAdicionarADM = new System.Windows.Forms.Button();
             this.btnExcluirUser = new System.Windows.Forms.Button();
             this.btnRemoverADM = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.dgvConsultaUser = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +73,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUserLogado)).BeginInit();
@@ -379,13 +379,16 @@
             this.btnCadastrarUserBD.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnCadastrarUserBD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCadastrarUserBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarUserBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarUserBD.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarUserBD.Location = new System.Drawing.Point(658, 434);
+            this.btnCadastrarUserBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarUserBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCadastrarUserBD.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarUserBD.Image")));
+            this.btnCadastrarUserBD.Location = new System.Drawing.Point(651, 451);
             this.btnCadastrarUserBD.Name = "btnCadastrarUserBD";
-            this.btnCadastrarUserBD.Size = new System.Drawing.Size(180, 77);
+            this.btnCadastrarUserBD.Size = new System.Drawing.Size(187, 60);
             this.btnCadastrarUserBD.TabIndex = 13;
             this.btnCadastrarUserBD.Text = "Cadastrar";
+            this.btnCadastrarUserBD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarUserBD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrarUserBD.UseVisualStyleBackColor = false;
             this.btnCadastrarUserBD.Click += new System.EventHandler(this.btnCadastrarUserBD_Click);
             // 
@@ -458,8 +461,8 @@
             this.gBoxConsultaUser.Controls.Add(this.btnAdicionarADM);
             this.gBoxConsultaUser.Controls.Add(this.btnExcluirUser);
             this.gBoxConsultaUser.Controls.Add(this.btnRemoverADM);
-            this.gBoxConsultaUser.Controls.Add(this.dgvConsultaUser);
             this.gBoxConsultaUser.Controls.Add(this.label8);
+            this.gBoxConsultaUser.Controls.Add(this.dgvConsultaUser);
             this.gBoxConsultaUser.Location = new System.Drawing.Point(340, 115);
             this.gBoxConsultaUser.Name = "gBoxConsultaUser";
             this.gBoxConsultaUser.Size = new System.Drawing.Size(850, 520);
@@ -523,6 +526,17 @@
             this.btnRemoverADM.UseVisualStyleBackColor = false;
             this.btnRemoverADM.Click += new System.EventHandler(this.btnRemoverADM_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(6, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(265, 29);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Usuários cadastrados";
+            // 
             // dgvConsultaUser
             // 
             this.dgvConsultaUser.BackgroundColor = System.Drawing.Color.LightSteelBlue;
@@ -578,17 +592,6 @@
             this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column6.Visible = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(6, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(265, 29);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Usuários cadastrados";
-            // 
             // admUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -601,8 +604,8 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.gBoxConsultaUser);
             this.Controls.Add(this.gBoxCadastroUser);
+            this.Controls.Add(this.gBoxConsultaUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "admUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

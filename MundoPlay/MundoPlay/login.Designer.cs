@@ -56,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(38, 437);
+            this.label1.Location = new System.Drawing.Point(37, 432);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 25);
@@ -66,10 +66,11 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(222, 492);
+            this.txtSenha.Location = new System.Drawing.Point(224, 487);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(208, 26);
+            this.txtSenha.Size = new System.Drawing.Size(220, 36);
             this.txtSenha.TabIndex = 14;
             this.txtSenha.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -78,7 +79,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(38, 498);
+            this.label2.Location = new System.Drawing.Point(37, 493);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 25);
@@ -88,10 +89,11 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(222, 431);
+            this.txtUsuario.Location = new System.Drawing.Point(224, 426);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(208, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(220, 36);
             this.txtUsuario.TabIndex = 13;
             this.txtUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -111,11 +113,13 @@
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.DimGray;
-            this.btnSair.Location = new System.Drawing.Point(364, 646);
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(344, 631);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(66, 42);
+            this.btnSair.Size = new System.Drawing.Size(100, 57);
             this.btnSair.TabIndex = 18;
             this.btnSair.Text = "Sair";
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
