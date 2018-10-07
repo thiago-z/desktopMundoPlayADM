@@ -40,7 +40,7 @@ namespace MundoPlay
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            //abrir tela do usuario
+            //abrir tela de cadastro
             //instanciar
             CadastroHome cadastroHome = new CadastroHome();
             cadastroHome.ShowDialog();
@@ -79,7 +79,7 @@ namespace MundoPlay
 
         private void btnGerenciar_Click(object sender, EventArgs e)
         {
-            //abrir tela do usuario
+            //abrir tela de admin
             //instanciar
             GerenciarHome admHome = new GerenciarHome();
             admHome.ShowDialog();
@@ -107,7 +107,10 @@ namespace MundoPlay
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-
+            //abrir tela de consulta
+            //instanciar
+            ConsultarHome consultaHome = new ConsultarHome();
+            consultaHome.ShowDialog();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

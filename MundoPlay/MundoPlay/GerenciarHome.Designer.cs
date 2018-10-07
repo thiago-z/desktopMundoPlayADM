@@ -41,7 +41,6 @@
             this.btnAdmTitulos = new System.Windows.Forms.Button();
             this.btnAdmUsuarios = new System.Windows.Forms.Button();
             this.btnAdmNoticias = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,7 +66,7 @@
             this.panel2.Controls.Add(this.nomeUserLogado);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.fotoUserLogado);
-            this.panel2.Location = new System.Drawing.Point(801, 5);
+            this.panel2.Location = new System.Drawing.Point(789, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(398, 88);
             this.panel2.TabIndex = 1;
@@ -149,55 +148,54 @@
             // 
             // btnAdmTitulos
             // 
-            this.btnAdmTitulos.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAdmTitulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmTitulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdmTitulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmTitulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmTitulos.ForeColor = System.Drawing.Color.White;
-            this.btnAdmTitulos.Location = new System.Drawing.Point(22, 49);
+            this.btnAdmTitulos.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmTitulos.Image")));
+            this.btnAdmTitulos.Location = new System.Drawing.Point(18, 49);
             this.btnAdmTitulos.Name = "btnAdmTitulos";
-            this.btnAdmTitulos.Size = new System.Drawing.Size(224, 145);
+            this.btnAdmTitulos.Size = new System.Drawing.Size(224, 110);
             this.btnAdmTitulos.TabIndex = 3;
-            this.btnAdmTitulos.Text = "Gerenciar Títulos";
+            this.btnAdmTitulos.Text = "Gerenciar  Títulos";
+            this.btnAdmTitulos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAdmTitulos.UseVisualStyleBackColor = false;
             this.btnAdmTitulos.Click += new System.EventHandler(this.btnAdmTitulos_Click);
             // 
             // btnAdmUsuarios
             // 
-            this.btnAdmUsuarios.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAdmUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdmUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnAdmUsuarios.Location = new System.Drawing.Point(652, 49);
+            this.btnAdmUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmUsuarios.Image")));
+            this.btnAdmUsuarios.Location = new System.Drawing.Point(648, 49);
             this.btnAdmUsuarios.Name = "btnAdmUsuarios";
-            this.btnAdmUsuarios.Size = new System.Drawing.Size(224, 145);
+            this.btnAdmUsuarios.Size = new System.Drawing.Size(224, 110);
             this.btnAdmUsuarios.TabIndex = 5;
             this.btnAdmUsuarios.Text = "Gerenciar Usuários";
+            this.btnAdmUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAdmUsuarios.UseVisualStyleBackColor = false;
             this.btnAdmUsuarios.Click += new System.EventHandler(this.btnAdmUsuarios_Click);
             // 
             // btnAdmNoticias
             // 
-            this.btnAdmNoticias.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAdmNoticias.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmNoticias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdmNoticias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmNoticias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmNoticias.ForeColor = System.Drawing.Color.White;
-            this.btnAdmNoticias.Location = new System.Drawing.Point(334, 49);
+            this.btnAdmNoticias.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmNoticias.Image")));
+            this.btnAdmNoticias.Location = new System.Drawing.Point(333, 49);
             this.btnAdmNoticias.Name = "btnAdmNoticias";
-            this.btnAdmNoticias.Size = new System.Drawing.Size(224, 145);
+            this.btnAdmNoticias.Size = new System.Drawing.Size(224, 110);
             this.btnAdmNoticias.TabIndex = 4;
             this.btnAdmNoticias.Text = "Gerenciar Notícias";
+            this.btnAdmNoticias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAdmNoticias.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(381, 188);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(486, 55);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Painel administrativo";
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.btnAdmTitulos);
             this.panel3.Controls.Add(this.btnAdmUsuarios);
             this.panel3.Controls.Add(this.btnAdmNoticias);
@@ -211,12 +209,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 720);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -231,7 +230,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -249,7 +247,6 @@
         private System.Windows.Forms.Button btnAdmTitulos;
         private System.Windows.Forms.Button btnAdmUsuarios;
         private System.Windows.Forms.Button btnAdmNoticias;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
     }
 }

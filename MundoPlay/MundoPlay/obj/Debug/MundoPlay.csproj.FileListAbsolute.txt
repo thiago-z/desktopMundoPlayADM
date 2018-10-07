@@ -44,3 +44,16 @@ C:\Users\storn\OneDrive\Documentos\GitHub\desktopMundoPlayADM\MundoPlay\MundoPla
 C:\Users\storn\OneDrive\Documentos\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.csproj.CoreCompileInputs.cache
 C:\Users\storn\OneDrive\Documentos\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.exe
 C:\Users\storn\OneDrive\Documentos\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.pdb
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.csprojAssemblyReference.cache
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.admUser.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.CadastroHome.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.ConsultarHome.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.frmPrincipal.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.GerenciarHome.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.login.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.Properties.Resources.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.usuario.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.csproj.GenerateResource.cache
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.csproj.CoreCompileInputs.cache
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.exe
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlay\MundoPlay\obj\Debug\MundoPlay.pdb

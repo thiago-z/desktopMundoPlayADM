@@ -163,6 +163,7 @@
             // fotoUserLogado
             // 
             this.fotoUserLogado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fotoUserLogado.Image = ((System.Drawing.Image)(resources.GetObject("fotoUserLogado.Image")));
             this.fotoUserLogado.Location = new System.Drawing.Point(8, 5);
             this.fotoUserLogado.Name = "fotoUserLogado";
             this.fotoUserLogado.Size = new System.Drawing.Size(76, 77);
@@ -837,9 +838,9 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.gBoxConsultaUser);
             this.Controls.Add(this.gBoxCadastroUser);
             this.Controls.Add(this.gBoxEditarUser);
+            this.Controls.Add(this.gBoxConsultaUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "admUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
