@@ -42,7 +42,6 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnGerenciar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUserLogado)).BeginInit();
@@ -205,6 +204,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.btnCadastro);
             this.panel3.Controls.Add(this.btnGerenciar);
             this.panel3.Controls.Add(this.btnConsultar);
@@ -214,26 +214,15 @@
             this.panel3.TabIndex = 6;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(416, 262);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(426, 55);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Painel de controle";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 720);
             this.ControlBox = false;
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
@@ -252,7 +241,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -271,6 +259,5 @@
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnGerenciar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
     }
 }

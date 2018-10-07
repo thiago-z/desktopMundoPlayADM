@@ -36,13 +36,14 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(42, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(402, 257);
@@ -100,7 +101,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.BorderSize = 4;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DimGray;
             this.button1.Location = new System.Drawing.Point(42, 551);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
@@ -114,14 +118,25 @@
             // 
             this.btnSair.BackColor = System.Drawing.Color.DimGray;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(344, 631);
+            this.btnSair.Location = new System.Drawing.Point(344, 640);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(100, 57);
+            this.btnSair.Size = new System.Drawing.Size(100, 48);
             this.btnSair.TabIndex = 18;
             this.btnSair.Text = "Sair";
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(133, 296);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(212, 59);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "LOGAR";
             // 
             // login
             // 
@@ -130,6 +145,7 @@
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(472, 700);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtUsuario);
@@ -137,6 +153,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "login";
@@ -157,5 +174,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label label3;
     }
 }

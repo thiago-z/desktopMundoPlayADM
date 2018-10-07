@@ -245,6 +245,7 @@ namespace MundoPlay
             btnExcluirUser.Enabled = true;
             btnRemoverADM.Enabled = true;
             btnAdicionarADM.Enabled = true;
+            btnEditarUserADM.Enabled = true;
         }
 
         private void btnRemoverADM_Click(object sender, EventArgs e)
@@ -343,6 +344,16 @@ namespace MundoPlay
                     "Informação", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
+        }
+
+        private void btnEditarUserADM_Click(object sender, EventArgs e)
+        {
+            gBoxEditarUser.Visible = true;
+        }
+
+        private void btnCancelarEditarUser_Click(object sender, EventArgs e)
+        {
+            gBoxEditarUser.Visible = false;
         }
     }
 }

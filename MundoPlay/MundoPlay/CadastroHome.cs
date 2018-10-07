@@ -59,5 +59,36 @@ namespace MundoPlay
         {
             Close();
         }
+
+        private void btnCancelarCadastro_Click(object sender, EventArgs e)
+        {
+            gBoxCadastrarSerie.Visible = false;
+        }
+
+        private void btnCadastroFilme_Click_1(object sender, EventArgs e)
+        {
+            gBoxCadastrarFilme.Visible = true;
+            gBoxCadastrarGame.Visible = false;
+            gBoxCadastrarSerie.Visible = false;
+        }
+
+        private void btnCadastroSerie_Click(object sender, EventArgs e)
+        {
+            gBoxCadastrarFilme.Visible = false;
+            gBoxCadastrarGame.Visible = false;
+            gBoxCadastrarSerie.Visible = true;
+        }
+
+        private void btnCadastroGame_Click(object sender, EventArgs e)
+        {
+            gBoxCadastrarFilme.Visible = false;
+            gBoxCadastrarGame.Visible = true;
+            gBoxCadastrarSerie.Visible = false;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

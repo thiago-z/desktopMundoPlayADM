@@ -10,21 +10,26 @@ using System.Windows.Forms;
 
 namespace MundoPlay
 {
-    public partial class CadastroFilme : Form
+    public partial class ConsultarHome : Form
     {
-        public CadastroFilme()
+        public ConsultarHome()
         {
             InitializeComponent();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void btnConsultaFilmes_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
