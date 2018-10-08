@@ -22,9 +22,9 @@ namespace MundoPlay
         {
             //Habilitar e dasabilitar conexoes
             //Cenexão Casa
-            conexao = "Data Source=DESKTOP-NBJI51Q;Initial Catalog=mundoPlay;Integrated Security=True";
+            //conexao = "Data Source=DESKTOP-NBJI51Q;Initial Catalog=mundoPlay;Integrated Security=True";
             //Cenexão Senac
-            //conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoPlay;Integrated Security=True";
+            conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoPlay;Integrated Security=True";
         }
 
         public admUser()
@@ -62,7 +62,8 @@ namespace MundoPlay
             String urlFoto = "C:/Users/storn/Documents/C#/desktopMundoPlayADM/MundoPlay/imagens/usuarios/";
 
             nomeUserLogado.Text = Program.nomeUsuario;
-            fotoUserLogado.ImageLocation = urlFoto + Program.fotoUsuario;
+            fotoUserLogado.ImageLocation = urlFoto + Program.fotoUsuario; 
+ 
 
 
         }
@@ -166,13 +167,10 @@ namespace MundoPlay
             int administrador=0;
 
             //Verificar se user será adm
-            if (rbtnADM.Text == "SIM")
+            if (ckbADM.Checked)
             {
-                adminintrador = 1;
+                administrador = 1;
             }
-
-
-
 
 
             sql = "INSERT INTO login (nome,email,usuario,senha,imgAutor,webmaster)";
@@ -190,7 +188,7 @@ namespace MundoPlay
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Registro atualizado com sucesso", "Informação",
+            MessageBox.Show("Registro inserido com sucesso", "Informação",
             MessageBoxButtons.OK,
             MessageBoxIcon.Exclamation);
 
@@ -354,6 +352,11 @@ namespace MundoPlay
         private void btnCancelarEditarUser_Click(object sender, EventArgs e)
         {
             gBoxEditarUser.Visible = false;
+        }
+
+        private void rbtnADM_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
