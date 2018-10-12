@@ -332,6 +332,28 @@ CREATE TABLE paises (
 )
 
 
+
+-- Tabela de tags
+
+CREATE TABLE tags (
+  idtags int NOT NULL identity,
+  tag varchar(45)NULL
+  PRIMARY KEY (idtags),
+)
+
+
+-- Tabela associativa tags e notícias
+
+CREATE TABLE noticia_tag (
+  noticia int,
+  tag int
+  PRIMARY KEY (noticia, tag),
+  FOREIGN KEY (noticia) REFERENCES noticias(idnoticias) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (tag) REFERENCES tags(idtags) ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+
+
 -- Tabela associativa filmes e paises
 
 CREATE TABLE filme_pais (
@@ -444,3 +466,10 @@ INSERT INTO publicadoras (nomePublicadora) VALUES
 ('Electronic Arts'),
 ('Nintendo'),
 ('Warner Bros. Interactive Entertainment');
+
+INSERT INTO tags (tag) VALUES
+('Cinema'),
+('Série'),
+('Games'),
+('Bilheteria'),
+('Lañçamentos');

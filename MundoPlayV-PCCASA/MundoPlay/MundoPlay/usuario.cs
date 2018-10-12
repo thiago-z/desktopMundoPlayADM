@@ -48,6 +48,9 @@ namespace MundoPlay
 
         private void usuario_Load(object sender, EventArgs e)
         {
+
+            
+
             String admOK = Program.admUsuario;
 
             if(admOK == "1")
@@ -119,6 +122,11 @@ namespace MundoPlay
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAvisoUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }

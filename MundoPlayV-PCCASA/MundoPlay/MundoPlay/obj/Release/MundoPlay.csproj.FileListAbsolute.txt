@@ -1,0 +1,15 @@
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\bin\Release\MundoPlay.exe.config
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\bin\Release\MundoPlay.exe
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\bin\Release\MundoPlay.pdb
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.admUser.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.CadastroHome.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.ConsultarHome.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.frmPrincipal.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.GerenciarHome.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.login.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.Properties.Resources.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.usuario.resources
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.csproj.GenerateResource.cache
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.csproj.CoreCompileInputs.cache
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.exe
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Release\MundoPlay.pdb

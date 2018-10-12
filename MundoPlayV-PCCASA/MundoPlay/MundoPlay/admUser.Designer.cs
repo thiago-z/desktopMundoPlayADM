@@ -43,6 +43,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.gBoxCadastroUser = new System.Windows.Forms.GroupBox();
+            this.ckbADM = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -89,7 +90,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnCancelarEditarUser = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.ckbADM = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUserLogado)).BeginInit();
@@ -191,7 +191,7 @@
             // btnVoltar
             // 
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btnVoltar.Location = new System.Drawing.Point(708, 432);
+            this.btnVoltar.Location = new System.Drawing.Point(708, 545);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(86, 28);
@@ -203,7 +203,7 @@
             // btnSair
             // 
             this.btnSair.ForeColor = System.Drawing.Color.Black;
-            this.btnSair.Location = new System.Drawing.Point(6, 432);
+            this.btnSair.Location = new System.Drawing.Point(6, 545);
             this.btnSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 28);
@@ -296,6 +296,18 @@
             this.gBoxCadastroUser.TabIndex = 19;
             this.gBoxCadastroUser.TabStop = false;
             this.gBoxCadastroUser.Visible = false;
+            // 
+            // ckbADM
+            // 
+            this.ckbADM.AutoSize = true;
+            this.ckbADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbADM.ForeColor = System.Drawing.Color.SkyBlue;
+            this.ckbADM.Location = new System.Drawing.Point(271, 258);
+            this.ckbADM.Name = "ckbADM";
+            this.ckbADM.Size = new System.Drawing.Size(48, 17);
+            this.ckbADM.TabIndex = 29;
+            this.ckbADM.Text = "SIM";
+            this.ckbADM.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -867,18 +879,6 @@
             this.label19.TabIndex = 1;
             this.label19.Text = "Editar usuário";
             // 
-            // ckbADM
-            // 
-            this.ckbADM.AutoSize = true;
-            this.ckbADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbADM.ForeColor = System.Drawing.Color.SkyBlue;
-            this.ckbADM.Location = new System.Drawing.Point(271, 258);
-            this.ckbADM.Name = "ckbADM";
-            this.ckbADM.Size = new System.Drawing.Size(48, 17);
-            this.ckbADM.TabIndex = 29;
-            this.ckbADM.Text = "SIM";
-            this.ckbADM.UseVisualStyleBackColor = true;
-            // 
             // admUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -886,7 +886,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 468);
+            this.ClientSize = new System.Drawing.Size(800, 580);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
