@@ -42,10 +42,10 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnGerenciar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUserLogado)).BeginInit();
@@ -172,7 +172,7 @@
             this.btnCadastro.Location = new System.Drawing.Point(11, 95);
             this.btnCadastro.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(147, 102);
+            this.btnCadastro.Size = new System.Drawing.Size(147, 100);
             this.btnCadastro.TabIndex = 3;
             this.btnCadastro.Text = "Cadastrar";
             this.btnCadastro.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -190,7 +190,7 @@
             this.btnConsultar.Location = new System.Drawing.Point(223, 95);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(147, 102);
+            this.btnConsultar.Size = new System.Drawing.Size(147, 100);
             this.btnConsultar.TabIndex = 4;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -208,7 +208,7 @@
             this.btnGerenciar.Location = new System.Drawing.Point(435, 95);
             this.btnGerenciar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGerenciar.Name = "btnGerenciar";
-            this.btnGerenciar.Size = new System.Drawing.Size(147, 102);
+            this.btnGerenciar.Size = new System.Drawing.Size(147, 100);
             this.btnGerenciar.TabIndex = 5;
             this.btnGerenciar.Text = "Gerenciar";
             this.btnGerenciar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -233,25 +233,15 @@
             this.panel3.TabIndex = 6;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // label2
+            // label7
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(149, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 33);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "PAINEL DO USUÁRIO";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 312);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(406, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "CADASTRAR - Se você pretende inserir informações como novos títulos ou notícias";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 344);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(481, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "GERENCIAR - Se você tiver permisão pode validar, excluir e gerenciar os usuários," +
+    " títulos e notícias";
             // 
             // label6
             // 
@@ -262,15 +252,25 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "CONSULTAR - Se você pretende consultar informaçoes já cadastradas";
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 344);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(481, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "GERENCIAR - Se você tiver permisão pode validar, excluir e gerenciar os usuários," +
-    " títulos e notícias";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 312);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(406, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "CADASTRAR - Se você pretende inserir informações como novos títulos ou notícias";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(149, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(326, 33);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "PAINEL DO USUÁRIO";
             // 
             // usuario
             // 

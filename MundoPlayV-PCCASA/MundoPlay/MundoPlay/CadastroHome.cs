@@ -15,9 +15,29 @@ namespace MundoPlay
 
     {
 
+        //Variaveis de de uso geral para manipulação do BD
+        string destacarNoticia;
+
+        int midiaCinema = 1;
+        int midiaSerie = 2;
+        int midiaGame = 3;
+        int tipoMidia;
+
+        String idfilme;
+        String idserie;
+        String idgame;
+        String idnoticia;
+
+        String data;
+        String hora;
+
+        
+        String nomeFoto;
+        String nomeFotoDestaque;
 
 
-        //variáveis globais
+
+        //variáveis globais de conexão com BD
         String conexao;
         private void conectar()
         {
@@ -45,8 +65,7 @@ namespace MundoPlay
             
         }
 
-        string data;
-        string hora;
+        
 
         private void CadastroHome_Load(object sender, EventArgs e)
         {
@@ -130,10 +149,29 @@ namespace MundoPlay
 
             dbConn.Close();
 
-
-
-
             //Puxa os paises
+            string paisesS = @"SELECT * FROM paises";
+
+            SqlCommand cmd10 = new SqlCommand(paisesS, dbConn);
+
+            dbConn.Open();
+
+            SqlDataReader rdr10 = cmd10.ExecuteReader();
+
+            while (rdr10.Read())
+
+            {
+
+                lstBoxPaisS.Items.Add(rdr10["nomePais"]);
+
+            }
+
+            rdr.Close();
+
+            dbConn.Close();
+
+
+            //Puxa os generos
             string generos = @"SELECT * FROM generos";
 
             SqlCommand cmd2 = new SqlCommand(generos, dbConn);
@@ -147,6 +185,27 @@ namespace MundoPlay
             {
 
                 lstBoxGenero.Items.Add(rdr2["idgeneros"]+" - "+rdr2["nomegenero"]);
+            }
+
+            rdr1.Close();
+
+            dbConn.Close();
+
+
+            //Puxa os generos
+            string generosS = @"SELECT * FROM generos";
+
+            SqlCommand cmd20 = new SqlCommand(generosS, dbConn);
+
+            dbConn.Open();
+
+            SqlDataReader rdr20 = cmd20.ExecuteReader();
+
+            while (rdr20.Read())
+
+            {
+
+                lstBoxGeneroS.Items.Add(rdr20["idgeneros"] + " - " + rdr20["nomegenero"]);
             }
 
             rdr1.Close();
@@ -247,9 +306,7 @@ namespace MundoPlay
         }
 
 
-        //Variaveis das imagens
-        String nomeFoto;
-        String nomeFotoDestaque;
+        
 
         private void btnUploadImgPosterF_Click(object sender, EventArgs e)
         {
@@ -268,8 +325,8 @@ namespace MundoPlay
             }
         }
 
-        String idfilme;
-        
+        string idgenero;
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -281,7 +338,8 @@ namespace MundoPlay
             // abrindo conexão
             conn.Open();
             String sql;
-            String sql10;
+            String sql1;
+            String sql2;
             string aspas = "'";
 
 
@@ -297,7 +355,6 @@ namespace MundoPlay
             sql = sql + aspas + txtURLFilme.Text;
             sql = sql + aspas + ")";
 
-
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = sql;
             cmd.CommandType = CommandType.Text;
@@ -305,30 +362,93 @@ namespace MundoPlay
             cmd.ExecuteNonQuery();
 
 
+
+            //Puxa o id do filme adicionado e atribui a variavel
+
+            sql1 = "SELECT idfilmes FROM filmes WHERE titulo = " + "'" + txtTituloFilme.Text + "'" + "";
+            SqlCommand cmd1 = new SqlCommand();
+            cmd1.CommandText = sql1;
+            cmd1.CommandType = CommandType.Text;
+            cmd1.Connection = conn;
+
+            SqlDataReader carregador;
+            //execução do comando
+            carregador = cmd1.ExecuteReader();
+            //verificando se o registro foi encontrado     
+
+            if (carregador.Read())
+            {
+                idfilme = carregador["idfilmes"].ToString();
+
+            }
+
+            carregador.Close();
+
+            //Insere o id do filme e o id da midia
+            sql2 = "INSERT INTO filme_midia (filme,midia)";
+            sql2 = sql2 + "VALUES (";
+            sql2 = sql2 + idfilme + ",";
+            sql2 = sql2 + midiaCinema;
+            sql2 = sql2 + ")";
+
+            SqlCommand cmd3 = new SqlCommand();
+            cmd3.CommandText = sql2;
+            cmd3.CommandType = CommandType.Text;
+            cmd3.Connection = conn;
+            cmd3.ExecuteNonQuery();
+
+
+
+            SqlCommand cmd4 = new SqlCommand("INSERT INTO filme_genero (filme,genero) VALUES (@id_filme,@id_genero)", conn);
+            try
+            {
+                conn.Open();
+
+                for (int i = 0; i < lstBoxGenero.Items.Count; i++)
+                {
+
+                    //Puxa o id do filme adicionado e atribui a variavel
+
+                    sql1 = "SELECT * FROM generos WHERE nomegenero = " + "'" + lstBoxGenero.Items + "'" + "";
+                    SqlCommand cmd5 = new SqlCommand();
+                    cmd5.CommandText = sql1;
+                    cmd5.CommandType = CommandType.Text;
+                    cmd5.Connection = conn;
+
+                    SqlDataReader carregador1;
+                    //execução do comando
+                    carregador1 = cmd5.ExecuteReader();
+                    //verificando se o registro foi encontrado     
+
+                    
+
+                    if (carregador1.Read())
+                    {
+                        idgenero = carregador1["idgeneros"].ToString();
+
+                    }
+
+                    carregador.Close();
+
+                    cmd.Parameters.AddWithValue("@id_filme", idfilme);
+                    cmd.Parameters.AddWithValue("@id_genero", idgenero[i]);
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                conn.Close();
+                
+            }
+
+            //Mostra mensagem se tudo correr como deveria
             MessageBox.Show("Filme inserido com sucesso!", "Informação",
             MessageBoxButtons.OK,
             MessageBoxIcon.Exclamation);
 
 
-            idfilme = "SELECT SCOPE_IDENTITY()";
 
-            //Criando a string de inserção da midia do filme
-            sql10 = "INSERT INTO filme_midia(filme,midia)";
-            sql10 = sql10 + "VALUES (";
-            sql10 = sql10 + aspas + idfilme + aspas + ",";
-            sql10 = sql10 + aspas + midiaCinema + aspas;
-            sql10 = sql10 + ")";
-
-            SqlCommand cmd1 = new SqlCommand();
-            cmd1.CommandText = sql10;
-            cmd1.CommandType = CommandType.Text;
-            cmd1.Connection = conn;
-            cmd1.ExecuteNonQuery();
-
-
-            MessageBox.Show("Midia Filme inserido com sucesso!", "Informação",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Exclamation);
 
 
         }
@@ -652,11 +772,7 @@ namespace MundoPlay
             }
         }
 
-
-        string destacarNoticia;
-        int midiaCinema;
-        int midiaSerie;
-        int midiaGame;
+       
 
         private void btnCadastrarNoticiaBD_Click(object sender, EventArgs e)
         {
@@ -667,18 +783,22 @@ namespace MundoPlay
                 destacarNoticia = "on";
             }
 
+            
+
             if (ckbCinema.Checked)
             {
-                midiaCinema = 1;
+                tipoMidia = midiaCinema;
             }
             if (ckbSerie.Checked)
             {
-                midiaSerie = 2;
+                tipoMidia = midiaSerie;
             }
             if (ckbGame.Checked)
             {
-                midiaGame = 3;
+                tipoMidia = midiaGame;
             }
+
+
 
             conectar();
             // conectando com o banco 
@@ -687,6 +807,8 @@ namespace MundoPlay
             // abrindo conexão
             conn.Open();
             String sql;
+            String sql1;
+            String sql2;
             string aspas = "'";
 
 
@@ -709,6 +831,45 @@ namespace MundoPlay
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
             cmd.ExecuteNonQuery();
+
+
+            //Puxa o id da noticia adicionada e atribui a variavel
+
+            sql1 = "SELECT idnoticias FROM noticias WHERE tituloNoticia = " + "'" + txtTituloNoticia.Text + "'" + "";
+            SqlCommand cmd1 = new SqlCommand();
+            cmd1.CommandText = sql1;
+            cmd1.CommandType = CommandType.Text;
+            cmd1.Connection = conn;
+
+            SqlDataReader carregador;
+            //execução do comando
+            carregador = cmd1.ExecuteReader();
+            //verificando se o registro foi encontrado     
+
+            if (carregador.Read())
+            {
+                idnoticia = carregador["idnoticias"].ToString();
+
+            }
+
+            carregador.Close();
+
+
+
+            //Insere o id da noticia e o id da midia
+            sql2 = "INSERT INTO noticia_midia (noticia,midia)";
+            sql2 = sql2 + "VALUES (";
+            sql2 = sql2 + idnoticia + ",";
+            sql2 = sql2 + tipoMidia;
+            sql2 = sql2 + ")";
+
+            SqlCommand cmd3 = new SqlCommand();
+            cmd3.CommandText = sql2;
+            cmd3.CommandType = CommandType.Text;
+            cmd3.Connection = conn;
+            cmd3.ExecuteNonQuery();
+
+
             MessageBox.Show("Notícia inserida com sucesso!", "Informação",
             MessageBoxButtons.OK,
             MessageBoxIcon.Exclamation);
@@ -717,6 +878,114 @@ namespace MundoPlay
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void gBoxCadastrarFilme_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCadastrarSerieBD_Click(object sender, EventArgs e)
+        {
+
+            conectar();
+            // conectando com o banco 
+            SqlConnection conn = new SqlConnection(conexao);
+
+            // abrindo conexão
+            conn.Open();
+            String sql;
+            String sql1;
+            String sql2;
+            string aspas = "'";
+
+
+            //Criando a string de inserção da série
+            sql = "INSERT INTO series (titulo,elenco,sinopse,temporadas,duracao,poster,trailer)";
+            sql = sql + "VALUES (";
+            sql = sql + aspas + txtTituloSerie.Text + aspas + ",";
+            sql = sql + aspas + txtElencoSerie.Text + aspas + ",";
+            sql = sql + aspas + txtSinopseSerie.Text + aspas + ",";
+            sql = sql + aspas + msktxtTempSerie.Text + aspas + ",";
+            sql = sql + aspas + msktxtDuracaoSerie.Text + aspas + ",";
+            sql = sql + aspas + nomeFoto + aspas + ",";
+            sql = sql + aspas + txtURLSerie.Text;
+            sql = sql + aspas + ")";
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = sql;
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
+
+
+            //Puxa o id do filme adicionado e atribui a variavel
+
+            sql1 = "SELECT idseries FROM series WHERE titulo = " + "'" + txtTituloSerie.Text + "'" + "";
+            SqlCommand cmd1 = new SqlCommand();
+            cmd1.CommandText = sql1;
+            cmd1.CommandType = CommandType.Text;
+            cmd1.Connection = conn;
+
+            SqlDataReader carregador;
+            //execução do comando
+            carregador = cmd1.ExecuteReader();
+            //verificando se o registro foi encontrado     
+
+            if (carregador.Read())
+            {
+                idserie = carregador["idseries"].ToString();
+
+            }
+
+            carregador.Close();
+
+            //Insere o id da série e o id da midia
+            sql2 = "INSERT INTO serie_midia (serie,midia)";
+            sql2 = sql2 + "VALUES (";
+            sql2 = sql2 + idserie + ",";
+            sql2 = sql2 + midiaSerie;
+            sql2 = sql2 + ")";
+
+
+
+
+            SqlCommand cmd3 = new SqlCommand();
+            cmd3.CommandText = sql2;
+            cmd3.CommandType = CommandType.Text;
+            cmd3.Connection = conn;
+            cmd3.ExecuteNonQuery();
+
+
+
+
+            //Mostra mensagem se tudo correr como deveria
+            MessageBox.Show("Série inserida com sucesso!", "Informação",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation);
+
+        }
+
+        private void btnUploadImgPosterS_Click(object sender, EventArgs e)
+        {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // pega somente o nome do arquivo
+                nomeFoto = System.IO.Path.GetFileName(open.FileName);
+                // display image in picture box  
+                picBoxAddSerie.Image = new Bitmap(open.FileName);
+                // image file path  
+                lblCaminhoFotoF.Text = open.FileName;
+            }
         }
     }
 }

@@ -46,7 +46,7 @@
             this.btnCadastroFilme = new System.Windows.Forms.Button();
             this.gBoxCadastrarSerie = new System.Windows.Forms.GroupBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtURLSerie = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -61,7 +61,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtElencoSerie = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -69,11 +69,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnUploadImgPosterS = new System.Windows.Forms.Button();
+            this.picBoxAddSerie = new System.Windows.Forms.PictureBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtSinopseSerie = new System.Windows.Forms.TextBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.msktxtTempSerie = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -132,6 +132,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.gBoxCadastrarGame = new System.Windows.Forms.GroupBox();
             this.gBoxCadastrarNoticia = new System.Windows.Forms.GroupBox();
+            this.lblDataHoraAtual = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
@@ -166,7 +167,6 @@
             this.btnCadastrarNoticiaBD = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
-            this.lblDataHoraAtual = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUserLogado)).BeginInit();
@@ -179,7 +179,7 @@
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAddSerie)).BeginInit();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
             this.gBoxCadastrarFilme.SuspendLayout();
@@ -226,6 +226,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 57);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // admUserLogado
             // 
@@ -321,7 +322,7 @@
             this.panel4.Location = new System.Drawing.Point(8, 83);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(201, 448);
+            this.panel4.Size = new System.Drawing.Size(201, 450);
             this.panel4.TabIndex = 19;
             // 
             // btnCadastroNoticia
@@ -429,7 +430,7 @@
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.textBox1);
+            this.panel11.Controls.Add(this.txtURLSerie);
             this.panel11.Controls.Add(this.label16);
             this.panel11.Controls.Add(this.label17);
             this.panel11.Location = new System.Drawing.Point(426, 258);
@@ -437,12 +438,12 @@
             this.panel11.Size = new System.Drawing.Size(133, 138);
             this.panel11.TabIndex = 35;
             // 
-            // textBox1
+            // txtURLSerie
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 25;
+            this.txtURLSerie.Location = new System.Drawing.Point(7, 55);
+            this.txtURLSerie.Name = "txtURLSerie";
+            this.txtURLSerie.Size = new System.Drawing.Size(120, 20);
+            this.txtURLSerie.TabIndex = 25;
             // 
             // label16
             // 
@@ -572,7 +573,7 @@
             // panel14
             // 
             this.panel14.Controls.Add(this.label21);
-            this.panel14.Controls.Add(this.textBox4);
+            this.panel14.Controls.Add(this.txtElencoSerie);
             this.panel14.Location = new System.Drawing.Point(6, 159);
             this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
@@ -590,14 +591,14 @@
             this.label21.TabIndex = 6;
             this.label21.Text = "Elenco";
             // 
-            // textBox4
+            // txtElencoSerie
             // 
-            this.textBox4.Location = new System.Drawing.Point(6, 20);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 62);
-            this.textBox4.TabIndex = 18;
+            this.txtElencoSerie.Location = new System.Drawing.Point(6, 20);
+            this.txtElencoSerie.Margin = new System.Windows.Forms.Padding(2);
+            this.txtElencoSerie.Multiline = true;
+            this.txtElencoSerie.Name = "txtElencoSerie";
+            this.txtElencoSerie.Size = new System.Drawing.Size(226, 62);
+            this.txtElencoSerie.TabIndex = 18;
             // 
             // panel15
             // 
@@ -653,8 +654,8 @@
             // panel16
             // 
             this.panel16.Controls.Add(this.label23);
-            this.panel16.Controls.Add(this.button5);
-            this.panel16.Controls.Add(this.pictureBox2);
+            this.panel16.Controls.Add(this.btnUploadImgPosterS);
+            this.panel16.Controls.Add(this.picBoxAddSerie);
             this.panel16.Location = new System.Drawing.Point(426, 33);
             this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
@@ -671,35 +672,36 @@
             this.label23.TabIndex = 22;
             this.label23.Text = "caminho poster...";
             // 
-            // button5
+            // btnUploadImgPosterS
             // 
-            this.button5.BackColor = System.Drawing.Color.SteelBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button5.Location = new System.Drawing.Point(7, 4);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 21);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Upload poster";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnUploadImgPosterS.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUploadImgPosterS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUploadImgPosterS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUploadImgPosterS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnUploadImgPosterS.Location = new System.Drawing.Point(7, 4);
+            this.btnUploadImgPosterS.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUploadImgPosterS.Name = "btnUploadImgPosterS";
+            this.btnUploadImgPosterS.Size = new System.Drawing.Size(120, 21);
+            this.btnUploadImgPosterS.TabIndex = 21;
+            this.btnUploadImgPosterS.Text = "Upload poster";
+            this.btnUploadImgPosterS.UseVisualStyleBackColor = false;
+            this.btnUploadImgPosterS.Click += new System.EventHandler(this.btnUploadImgPosterS_Click);
             // 
-            // pictureBox2
+            // picBoxAddSerie
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(7, 29);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(120, 162);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
+            this.picBoxAddSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBoxAddSerie.Location = new System.Drawing.Point(7, 29);
+            this.picBoxAddSerie.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxAddSerie.Name = "picBoxAddSerie";
+            this.picBoxAddSerie.Size = new System.Drawing.Size(120, 162);
+            this.picBoxAddSerie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxAddSerie.TabIndex = 20;
+            this.picBoxAddSerie.TabStop = false;
             // 
             // panel17
             // 
             this.panel17.Controls.Add(this.label24);
-            this.panel17.Controls.Add(this.textBox7);
+            this.panel17.Controls.Add(this.txtSinopseSerie);
             this.panel17.Location = new System.Drawing.Point(6, 255);
             this.panel17.Margin = new System.Windows.Forms.Padding(2);
             this.panel17.Name = "panel17";
@@ -717,14 +719,14 @@
             this.label24.TabIndex = 6;
             this.label24.Text = "Sinopse";
             // 
-            // textBox7
+            // txtSinopseSerie
             // 
-            this.textBox7.Location = new System.Drawing.Point(6, 20);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(226, 122);
-            this.textBox7.TabIndex = 18;
+            this.txtSinopseSerie.Location = new System.Drawing.Point(6, 20);
+            this.txtSinopseSerie.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSinopseSerie.Multiline = true;
+            this.txtSinopseSerie.Name = "txtSinopseSerie";
+            this.txtSinopseSerie.Size = new System.Drawing.Size(226, 122);
+            this.txtSinopseSerie.TabIndex = 18;
             // 
             // panel18
             // 
@@ -841,6 +843,7 @@
             this.btnCadastrarSerieBD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrarSerieBD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrarSerieBD.UseVisualStyleBackColor = false;
+            this.btnCadastrarSerieBD.Click += new System.EventHandler(this.btnCadastrarSerieBD_Click);
             // 
             // button7
             // 
@@ -894,6 +897,7 @@
             this.gBoxCadastrarFilme.TabIndex = 23;
             this.gBoxCadastrarFilme.TabStop = false;
             this.gBoxCadastrarFilme.Visible = false;
+            this.gBoxCadastrarFilme.Enter += new System.EventHandler(this.gBoxCadastrarFilme_Enter);
             // 
             // panel10
             // 
@@ -1275,7 +1279,7 @@
             // 
             // txtSubtituloFilme
             // 
-            this.txtSubtituloFilme.Location = new System.Drawing.Point(5, 60);
+            this.txtSubtituloFilme.Location = new System.Drawing.Point(5, 63);
             this.txtSubtituloFilme.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubtituloFilme.Name = "txtSubtituloFilme";
             this.txtSubtituloFilme.Size = new System.Drawing.Size(227, 20);
@@ -1283,7 +1287,7 @@
             // 
             // txtTituloFilme
             // 
-            this.txtTituloFilme.Location = new System.Drawing.Point(5, 19);
+            this.txtTituloFilme.Location = new System.Drawing.Point(5, 23);
             this.txtTituloFilme.Margin = new System.Windows.Forms.Padding(2);
             this.txtTituloFilme.Name = "txtTituloFilme";
             this.txtTituloFilme.Size = new System.Drawing.Size(227, 20);
@@ -1293,7 +1297,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(5, 45);
+            this.label6.Location = new System.Drawing.Point(5, 48);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 13);
@@ -1405,6 +1409,16 @@
             this.gBoxCadastrarNoticia.TabStop = false;
             this.gBoxCadastrarNoticia.Visible = false;
             this.gBoxCadastrarNoticia.Enter += new System.EventHandler(this.gBoxCadastrarNoticia_Enter);
+            // 
+            // lblDataHoraAtual
+            // 
+            this.lblDataHoraAtual.AutoSize = true;
+            this.lblDataHoraAtual.ForeColor = System.Drawing.Color.White;
+            this.lblDataHoraAtual.Location = new System.Drawing.Point(410, 10);
+            this.lblDataHoraAtual.Name = "lblDataHoraAtual";
+            this.lblDataHoraAtual.Size = new System.Drawing.Size(41, 13);
+            this.lblDataHoraAtual.TabIndex = 27;
+            this.lblDataHoraAtual.Text = "label38";
             // 
             // panel23
             // 
@@ -1801,16 +1815,6 @@
             this.label29.TabIndex = 1;
             this.label29.Text = "Cadastrar notícia";
             // 
-            // lblDataHoraAtual
-            // 
-            this.lblDataHoraAtual.AutoSize = true;
-            this.lblDataHoraAtual.ForeColor = System.Drawing.Color.White;
-            this.lblDataHoraAtual.Location = new System.Drawing.Point(410, 10);
-            this.lblDataHoraAtual.Name = "lblDataHoraAtual";
-            this.lblDataHoraAtual.Size = new System.Drawing.Size(41, 13);
-            this.lblDataHoraAtual.TabIndex = 27;
-            this.lblDataHoraAtual.Text = "label38";
-            // 
             // CadastroHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1855,7 +1859,7 @@
             this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAddSerie)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel18.ResumeLayout(false);
@@ -1963,7 +1967,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtAddDiretorSobrenomeLista;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtURLSerie;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel12;
@@ -1978,7 +1982,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtElencoSerie;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox6;
@@ -1986,11 +1990,11 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnUploadImgPosterS;
+        private System.Windows.Forms.PictureBox picBoxAddSerie;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtSinopseSerie;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.MaskedTextBox msktxtDuracaoSerie;
         private System.Windows.Forms.Label label25;

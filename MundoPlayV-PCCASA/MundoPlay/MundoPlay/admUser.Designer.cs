@@ -63,6 +63,10 @@
             this.pBoxFotoUser = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gBoxConsultaUser = new System.Windows.Forms.GroupBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblUserSelecionado = new System.Windows.Forms.Label();
+            this.picBoxUserSelecionado = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnBuscaUser = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -70,8 +74,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEditarUserADM = new System.Windows.Forms.Button();
             this.btnAdicionarADM = new System.Windows.Forms.Button();
             this.btnExcluirUser = new System.Windows.Forms.Button();
@@ -99,8 +101,9 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxFotoUser)).BeginInit();
             this.gBoxConsultaUser.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxUserSelecionado)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaUser)).BeginInit();
             this.gBoxEditarUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -112,7 +115,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(802, 65);
             this.panel1.TabIndex = 1;
@@ -125,7 +128,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.fotoUserLogado);
             this.panel2.Location = new System.Drawing.Point(530, 3);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 57);
             this.panel2.TabIndex = 1;
@@ -170,7 +173,7 @@
             this.fotoUserLogado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fotoUserLogado.Image = ((System.Drawing.Image)(resources.GetObject("fotoUserLogado.Image")));
             this.fotoUserLogado.Location = new System.Drawing.Point(5, 3);
-            this.fotoUserLogado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fotoUserLogado.Margin = new System.Windows.Forms.Padding(2);
             this.fotoUserLogado.Name = "fotoUserLogado";
             this.fotoUserLogado.Size = new System.Drawing.Size(51, 51);
             this.fotoUserLogado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -181,7 +184,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(8, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -192,7 +195,7 @@
             // 
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
             this.btnVoltar.Location = new System.Drawing.Point(708, 545);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(86, 28);
             this.btnVoltar.TabIndex = 12;
@@ -204,7 +207,7 @@
             // 
             this.btnSair.ForeColor = System.Drawing.Color.Black;
             this.btnSair.Location = new System.Drawing.Point(6, 545);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(2);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 28);
             this.btnSair.TabIndex = 11;
@@ -221,9 +224,9 @@
             this.btnCadastroUser.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroUser.Image")));
             this.btnCadastroUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastroUser.Location = new System.Drawing.Point(17, 83);
-            this.btnCadastroUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCadastroUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastroUser.Name = "btnCadastroUser";
-            this.btnCadastroUser.Size = new System.Drawing.Size(167, 32);
+            this.btnCadastroUser.Size = new System.Drawing.Size(167, 40);
             this.btnCadastroUser.TabIndex = 13;
             this.btnCadastroUser.Text = "Cadastrar usuários";
             this.btnCadastroUser.UseVisualStyleBackColor = false;
@@ -237,10 +240,10 @@
             this.btnConsultaUser.ForeColor = System.Drawing.Color.White;
             this.btnConsultaUser.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultaUser.Image")));
             this.btnConsultaUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultaUser.Location = new System.Drawing.Point(17, 120);
-            this.btnConsultaUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultaUser.Location = new System.Drawing.Point(17, 150);
+            this.btnConsultaUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultaUser.Name = "btnConsultaUser";
-            this.btnConsultaUser.Size = new System.Drawing.Size(167, 32);
+            this.btnConsultaUser.Size = new System.Drawing.Size(167, 40);
             this.btnConsultaUser.TabIndex = 14;
             this.btnConsultaUser.Text = "Consultar usuários";
             this.btnConsultaUser.UseVisualStyleBackColor = false;
@@ -254,9 +257,9 @@
             this.panel4.Controls.Add(this.btnConsultaUser);
             this.panel4.Controls.Add(this.btnCadastroUser);
             this.panel4.Location = new System.Drawing.Point(8, 81);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(201, 332);
+            this.panel4.Size = new System.Drawing.Size(201, 450);
             this.panel4.TabIndex = 18;
             // 
             // label2
@@ -289,10 +292,10 @@
             this.gBoxCadastroUser.Controls.Add(this.pBoxFotoUser);
             this.gBoxCadastroUser.Controls.Add(this.label3);
             this.gBoxCadastroUser.Location = new System.Drawing.Point(227, 75);
-            this.gBoxCadastroUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gBoxCadastroUser.Margin = new System.Windows.Forms.Padding(2);
             this.gBoxCadastroUser.Name = "gBoxCadastroUser";
-            this.gBoxCadastroUser.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gBoxCadastroUser.Size = new System.Drawing.Size(567, 338);
+            this.gBoxCadastroUser.Padding = new System.Windows.Forms.Padding(2);
+            this.gBoxCadastroUser.Size = new System.Drawing.Size(567, 455);
             this.gBoxCadastroUser.TabIndex = 19;
             this.gBoxCadastroUser.TabStop = false;
             this.gBoxCadastroUser.Visible = false;
@@ -317,10 +320,10 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkBlue;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(9, 293);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(9, 408);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 39);
+            this.button1.Size = new System.Drawing.Size(83, 39);
             this.button1.TabIndex = 28;
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
@@ -358,7 +361,7 @@
             this.panel3.Controls.Add(this.txtUser);
             this.panel3.Controls.Add(this.txtSenhaUser);
             this.panel3.Location = new System.Drawing.Point(5, 148);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(321, 81);
             this.panel3.TabIndex = 24;
@@ -366,7 +369,7 @@
             // txtSenhaUserConf
             // 
             this.txtSenhaUserConf.Location = new System.Drawing.Point(173, 54);
-            this.txtSenhaUserConf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSenhaUserConf.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenhaUserConf.Multiline = true;
             this.txtSenhaUserConf.Name = "txtSenhaUserConf";
             this.txtSenhaUserConf.Size = new System.Drawing.Size(136, 20);
@@ -412,7 +415,7 @@
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(173, 8);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.Multiline = true;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(136, 20);
@@ -421,7 +424,7 @@
             // txtSenhaUser
             // 
             this.txtSenhaUser.Location = new System.Drawing.Point(173, 31);
-            this.txtSenhaUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSenhaUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenhaUser.Multiline = true;
             this.txtSenhaUser.Name = "txtSenhaUser";
             this.txtSenhaUser.Size = new System.Drawing.Size(136, 20);
@@ -436,6 +439,7 @@
             this.lblCaminho_Foto.Size = new System.Drawing.Size(333, 14);
             this.lblCaminho_Foto.TabIndex = 23;
             this.lblCaminho_Foto.Text = "caminho da imagem...";
+            this.lblCaminho_Foto.Visible = false;
             // 
             // btnCadastrarUserBD
             // 
@@ -445,10 +449,10 @@
             this.btnCadastrarUserBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarUserBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnCadastrarUserBD.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarUserBD.Image")));
-            this.btnCadastrarUserBD.Location = new System.Drawing.Point(437, 293);
-            this.btnCadastrarUserBD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCadastrarUserBD.Location = new System.Drawing.Point(436, 396);
+            this.btnCadastrarUserBD.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastrarUserBD.Name = "btnCadastrarUserBD";
-            this.btnCadastrarUserBD.Size = new System.Drawing.Size(120, 39);
+            this.btnCadastrarUserBD.Size = new System.Drawing.Size(123, 50);
             this.btnCadastrarUserBD.TabIndex = 13;
             this.btnCadastrarUserBD.Text = "Cadastrar";
             this.btnCadastrarUserBD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -462,7 +466,7 @@
             this.btnUploadImgUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUploadImgUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnUploadImgUser.Location = new System.Drawing.Point(390, 58);
-            this.btnUploadImgUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUploadImgUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnUploadImgUser.Name = "btnUploadImgUser";
             this.btnUploadImgUser.Size = new System.Drawing.Size(169, 25);
             this.btnUploadImgUser.TabIndex = 12;
@@ -473,7 +477,7 @@
             // txtEmailUser
             // 
             this.txtEmailUser.Location = new System.Drawing.Point(105, 92);
-            this.txtEmailUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmailUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailUser.Multiline = true;
             this.txtEmailUser.Name = "txtEmailUser";
             this.txtEmailUser.Size = new System.Drawing.Size(211, 20);
@@ -482,7 +486,7 @@
             // txtNomeUser
             // 
             this.txtNomeUser.Location = new System.Drawing.Point(105, 58);
-            this.txtNomeUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNomeUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtNomeUser.Multiline = true;
             this.txtNomeUser.Name = "txtNomeUser";
             this.txtNomeUser.Size = new System.Drawing.Size(211, 20);
@@ -505,7 +509,7 @@
             this.pBoxFotoUser.BackColor = System.Drawing.Color.Transparent;
             this.pBoxFotoUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pBoxFotoUser.Location = new System.Drawing.Point(390, 84);
-            this.pBoxFotoUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pBoxFotoUser.Margin = new System.Windows.Forms.Padding(2);
             this.pBoxFotoUser.Name = "pBoxFotoUser";
             this.pBoxFotoUser.Size = new System.Drawing.Size(170, 170);
             this.pBoxFotoUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -527,9 +531,8 @@
             // gBoxConsultaUser
             // 
             this.gBoxConsultaUser.BackColor = System.Drawing.Color.Transparent;
+            this.gBoxConsultaUser.Controls.Add(this.panel6);
             this.gBoxConsultaUser.Controls.Add(this.panel5);
-            this.gBoxConsultaUser.Controls.Add(this.label11);
-            this.gBoxConsultaUser.Controls.Add(this.pictureBox2);
             this.gBoxConsultaUser.Controls.Add(this.btnEditarUserADM);
             this.gBoxConsultaUser.Controls.Add(this.btnAdicionarADM);
             this.gBoxConsultaUser.Controls.Add(this.btnExcluirUser);
@@ -537,13 +540,56 @@
             this.gBoxConsultaUser.Controls.Add(this.label8);
             this.gBoxConsultaUser.Controls.Add(this.dgvConsultaUser);
             this.gBoxConsultaUser.Location = new System.Drawing.Point(227, 75);
-            this.gBoxConsultaUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gBoxConsultaUser.Margin = new System.Windows.Forms.Padding(2);
             this.gBoxConsultaUser.Name = "gBoxConsultaUser";
-            this.gBoxConsultaUser.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gBoxConsultaUser.Size = new System.Drawing.Size(567, 338);
+            this.gBoxConsultaUser.Padding = new System.Windows.Forms.Padding(2);
+            this.gBoxConsultaUser.Size = new System.Drawing.Size(567, 455);
             this.gBoxConsultaUser.TabIndex = 20;
             this.gBoxConsultaUser.TabStop = false;
             this.gBoxConsultaUser.Visible = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.lblUserSelecionado);
+            this.panel6.Controls.Add(this.picBoxUserSelecionado);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Location = new System.Drawing.Point(123, 301);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(318, 91);
+            this.panel6.TabIndex = 21;
+            // 
+            // lblUserSelecionado
+            // 
+            this.lblUserSelecionado.AutoSize = true;
+            this.lblUserSelecionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserSelecionado.Location = new System.Drawing.Point(88, 29);
+            this.lblUserSelecionado.Name = "lblUserSelecionado";
+            this.lblUserSelecionado.Size = new System.Drawing.Size(196, 20);
+            this.lblUserSelecionado.TabIndex = 20;
+            this.lblUserSelecionado.Text = "Nome user selecionado";
+            // 
+            // picBoxUserSelecionado
+            // 
+            this.picBoxUserSelecionado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxUserSelecionado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBoxUserSelecionado.Location = new System.Drawing.Point(3, 7);
+            this.picBoxUserSelecionado.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxUserSelecionado.Name = "picBoxUserSelecionado";
+            this.picBoxUserSelecionado.Size = new System.Drawing.Size(81, 79);
+            this.picBoxUserSelecionado.TabIndex = 19;
+            this.picBoxUserSelecionado.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(88, 10);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(122, 13);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Usuário selecionado";
             // 
             // panel5
             // 
@@ -554,8 +600,8 @@
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.label12);
-            this.panel5.Location = new System.Drawing.Point(267, 21);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Location = new System.Drawing.Point(386, 21);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(174, 79);
             this.panel5.TabIndex = 20;
@@ -565,7 +611,7 @@
             this.btnBuscaUser.ForeColor = System.Drawing.Color.Transparent;
             this.btnBuscaUser.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaUser.Image")));
             this.btnBuscaUser.Location = new System.Drawing.Point(131, 35);
-            this.btnBuscaUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscaUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscaUser.Name = "btnBuscaUser";
             this.btnBuscaUser.Size = new System.Drawing.Size(33, 32);
             this.btnBuscaUser.TabIndex = 26;
@@ -574,7 +620,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(48, 55);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(76, 20);
             this.textBox2.TabIndex = 25;
@@ -582,7 +628,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(48, 32);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 24;
@@ -623,29 +669,6 @@
             this.label12.TabIndex = 21;
             this.label12.Text = "Buscar por";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(495, 81);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 13);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Usuário";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(478, 21);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(81, 79);
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnEditarUserADM
             // 
             this.btnEditarUserADM.BackColor = System.Drawing.Color.DarkGray;
@@ -655,10 +678,10 @@
             this.btnEditarUserADM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEditarUserADM.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarUserADM.Image")));
             this.btnEditarUserADM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarUserADM.Location = new System.Drawing.Point(437, 301);
-            this.btnEditarUserADM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditarUserADM.Location = new System.Drawing.Point(437, 397);
+            this.btnEditarUserADM.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarUserADM.Name = "btnEditarUserADM";
-            this.btnEditarUserADM.Size = new System.Drawing.Size(120, 32);
+            this.btnEditarUserADM.Size = new System.Drawing.Size(120, 50);
             this.btnEditarUserADM.TabIndex = 17;
             this.btnEditarUserADM.Text = "Editar usuário";
             this.btnEditarUserADM.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -674,10 +697,10 @@
             this.btnAdicionarADM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnAdicionarADM.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarADM.Image")));
             this.btnAdicionarADM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdicionarADM.Location = new System.Drawing.Point(295, 301);
-            this.btnAdicionarADM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdicionarADM.Location = new System.Drawing.Point(295, 397);
+            this.btnAdicionarADM.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdicionarADM.Name = "btnAdicionarADM";
-            this.btnAdicionarADM.Size = new System.Drawing.Size(120, 32);
+            this.btnAdicionarADM.Size = new System.Drawing.Size(120, 50);
             this.btnAdicionarADM.TabIndex = 16;
             this.btnAdicionarADM.Text = "Tornar ADM";
             this.btnAdicionarADM.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -693,10 +716,10 @@
             this.btnExcluirUser.ForeColor = System.Drawing.Color.Red;
             this.btnExcluirUser.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluirUser.Image")));
             this.btnExcluirUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluirUser.Location = new System.Drawing.Point(9, 301);
-            this.btnExcluirUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExcluirUser.Location = new System.Drawing.Point(9, 397);
+            this.btnExcluirUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcluirUser.Name = "btnExcluirUser";
-            this.btnExcluirUser.Size = new System.Drawing.Size(120, 32);
+            this.btnExcluirUser.Size = new System.Drawing.Size(120, 50);
             this.btnExcluirUser.TabIndex = 15;
             this.btnExcluirUser.Text = "Excluir Usuário";
             this.btnExcluirUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -712,10 +735,10 @@
             this.btnRemoverADM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnRemoverADM.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoverADM.Image")));
             this.btnRemoverADM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoverADM.Location = new System.Drawing.Point(152, 301);
-            this.btnRemoverADM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemoverADM.Location = new System.Drawing.Point(152, 397);
+            this.btnRemoverADM.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoverADM.Name = "btnRemoverADM";
-            this.btnRemoverADM.Size = new System.Drawing.Size(120, 32);
+            this.btnRemoverADM.Size = new System.Drawing.Size(120, 50);
             this.btnRemoverADM.TabIndex = 14;
             this.btnRemoverADM.Text = "Remover ADM";
             this.btnRemoverADM.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -745,11 +768,11 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvConsultaUser.Location = new System.Drawing.Point(7, 114);
-            this.dgvConsultaUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvConsultaUser.Location = new System.Drawing.Point(6, 114);
+            this.dgvConsultaUser.Margin = new System.Windows.Forms.Padding(2);
             this.dgvConsultaUser.Name = "dgvConsultaUser";
             this.dgvConsultaUser.RowTemplate.Height = 28;
-            this.dgvConsultaUser.Size = new System.Drawing.Size(553, 182);
+            this.dgvConsultaUser.Size = new System.Drawing.Size(555, 182);
             this.dgvConsultaUser.TabIndex = 2;
             this.dgvConsultaUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaUser_click);
             this.dgvConsultaUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaUser_CellContentClick);
@@ -764,13 +787,11 @@
             // 
             this.Column2.HeaderText = "Nome";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Email";
             this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
             // 
             // Column4
             // 
@@ -799,10 +820,10 @@
             this.gBoxEditarUser.Controls.Add(this.btnCancelarEditarUser);
             this.gBoxEditarUser.Controls.Add(this.label19);
             this.gBoxEditarUser.Location = new System.Drawing.Point(227, 75);
-            this.gBoxEditarUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gBoxEditarUser.Margin = new System.Windows.Forms.Padding(2);
             this.gBoxEditarUser.Name = "gBoxEditarUser";
-            this.gBoxEditarUser.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gBoxEditarUser.Size = new System.Drawing.Size(567, 338);
+            this.gBoxEditarUser.Padding = new System.Windows.Forms.Padding(2);
+            this.gBoxEditarUser.Size = new System.Drawing.Size(567, 455);
             this.gBoxEditarUser.TabIndex = 21;
             this.gBoxEditarUser.TabStop = false;
             this.gBoxEditarUser.Visible = false;
@@ -824,7 +845,7 @@
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Location = new System.Drawing.Point(478, 21);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(81, 79);
             this.pictureBox3.TabIndex = 19;
@@ -840,7 +861,7 @@
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(437, 301);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 32);
             this.button3.TabIndex = 17;
@@ -857,7 +878,7 @@
             this.btnCancelarEditarUser.ForeColor = System.Drawing.Color.Red;
             this.btnCancelarEditarUser.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarEditarUser.Image")));
             this.btnCancelarEditarUser.Location = new System.Drawing.Point(9, 274);
-            this.btnCancelarEditarUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarEditarUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarEditarUser.Name = "btnCancelarEditarUser";
             this.btnCancelarEditarUser.Size = new System.Drawing.Size(67, 58);
             this.btnCancelarEditarUser.TabIndex = 15;
@@ -891,11 +912,11 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.gBoxConsultaUser);
             this.Controls.Add(this.gBoxCadastroUser);
             this.Controls.Add(this.gBoxEditarUser);
-            this.Controls.Add(this.gBoxConsultaUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "admUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "admUser";
@@ -914,9 +935,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBoxFotoUser)).EndInit();
             this.gBoxConsultaUser.ResumeLayout(false);
             this.gBoxConsultaUser.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxUserSelecionado)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaUser)).EndInit();
             this.gBoxEditarUser.ResumeLayout(false);
             this.gBoxEditarUser.PerformLayout();
@@ -974,13 +997,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.PictureBox picBoxUserSelecionado;
         private System.Windows.Forms.GroupBox gBoxEditarUser;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -988,5 +1005,13 @@
         private System.Windows.Forms.Button btnCancelarEditarUser;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.CheckBox ckbADM;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lblUserSelecionado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

@@ -22,9 +22,9 @@ namespace MundoPlay
         {
             //Habilitar e dasabilitar conexoes
             //Cenexão Casa
-            //conexao = @"Data Source=DESKTOP-73BU5RN\SQLEXPRESS;Initial Catalog=mundoPlay;Integrated Security=True";
+            conexao = @"Data Source=DESKTOP-73BU5RN\SQLEXPRESS;Initial Catalog=mundoPlay;Integrated Security=True";
             //Cenexão Senac
-            conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoPlay;Integrated Security=True";
+            //conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoPlay;Integrated Security=True";
         }
 
         public admUser()
@@ -113,7 +113,6 @@ namespace MundoPlay
                     carregador["nome"].ToString(),
                     carregador["email"].ToString(),
                     carregador["usuario"].ToString(),
-                    carregador["imgAutor"].ToString(),
                     carregador["webmaster"].ToString());
             }
 
@@ -217,25 +216,8 @@ namespace MundoPlay
         private void dgvConsultaUser_click(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (dgvConsultaUser.CurrentRow.Cells[0].Value != null)
-
-            {
-
-                IdUsuarioSelecionado = dgvConsultaUser.CurrentRow.Cells[0].Value.ToString();
-
-                dgvConsultaUser.CurrentRow.Cells[1].Value.ToString();
-
-                dgvConsultaUser.CurrentRow.Cells[2].Value.ToString();
-
-                dgvConsultaUser.CurrentRow.Cells[3].Value.ToString();
-
-                dgvConsultaUser.CurrentRow.Cells[4].Value.ToString();
-
-                dgvConsultaUser.CurrentRow.Cells[5].Value.ToString();
 
 
-
-            }
         }
 
         private void dgvConsultaUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -244,6 +226,21 @@ namespace MundoPlay
             btnRemoverADM.Enabled = true;
             btnAdicionarADM.Enabled = true;
             btnEditarUserADM.Enabled = true;
+
+
+
+
+
+
+
+
+            //URL da imagem Senac
+            //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
+            //URL da imagem Casa
+            String urlFoto = "C:/Users/storn/Documents/C#/desktopMundoPlayADM/MundoPlay/imagens/usuarios/";
+
+            lblUserSelecionado.Text = Program.nomeUsuario;
+            picBoxUserSelecionado.ImageLocation = urlFoto + Program.fotoUsuario;
         }
 
         private void btnRemoverADM_Click(object sender, EventArgs e)

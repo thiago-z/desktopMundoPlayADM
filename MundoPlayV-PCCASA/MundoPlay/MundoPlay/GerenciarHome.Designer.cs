@@ -55,7 +55,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 65);
             this.panel1.TabIndex = 8;
@@ -68,7 +68,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.fotoUserLogado);
             this.panel2.Location = new System.Drawing.Point(526, 3);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 57);
             this.panel2.TabIndex = 1;
@@ -113,7 +113,7 @@
             this.fotoUserLogado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fotoUserLogado.Image = ((System.Drawing.Image)(resources.GetObject("fotoUserLogado.Image")));
             this.fotoUserLogado.Location = new System.Drawing.Point(5, 3);
-            this.fotoUserLogado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fotoUserLogado.Margin = new System.Windows.Forms.Padding(2);
             this.fotoUserLogado.Name = "fotoUserLogado";
             this.fotoUserLogado.Size = new System.Drawing.Size(51, 51);
             this.fotoUserLogado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -124,7 +124,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(8, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,7 +135,7 @@
             // 
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
             this.btnVoltar.Location = new System.Drawing.Point(708, 546);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(86, 28);
             this.btnVoltar.TabIndex = 10;
@@ -147,7 +147,7 @@
             // 
             this.btnSair.ForeColor = System.Drawing.Color.Black;
             this.btnSair.Location = new System.Drawing.Point(6, 546);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(2);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 28);
             this.btnSair.TabIndex = 9;
@@ -159,16 +159,17 @@
             // 
             this.btnAdmTitulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAdmTitulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmTitulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmTitulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmTitulos.ForeColor = System.Drawing.Color.White;
             this.btnAdmTitulos.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmTitulos.Image")));
+            this.btnAdmTitulos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdmTitulos.Location = new System.Drawing.Point(12, 32);
-            this.btnAdmTitulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdmTitulos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdmTitulos.Name = "btnAdmTitulos";
-            this.btnAdmTitulos.Size = new System.Drawing.Size(149, 71);
+            this.btnAdmTitulos.Size = new System.Drawing.Size(149, 100);
             this.btnAdmTitulos.TabIndex = 3;
             this.btnAdmTitulos.Text = "Gerenciar  Títulos";
-            this.btnAdmTitulos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAdmTitulos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAdmTitulos.UseVisualStyleBackColor = false;
             this.btnAdmTitulos.Click += new System.EventHandler(this.btnAdmTitulos_Click);
             // 
@@ -176,16 +177,17 @@
             // 
             this.btnAdmUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAdmUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnAdmUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmUsuarios.Image")));
+            this.btnAdmUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdmUsuarios.Location = new System.Drawing.Point(432, 32);
-            this.btnAdmUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdmUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdmUsuarios.Name = "btnAdmUsuarios";
-            this.btnAdmUsuarios.Size = new System.Drawing.Size(149, 71);
+            this.btnAdmUsuarios.Size = new System.Drawing.Size(149, 100);
             this.btnAdmUsuarios.TabIndex = 5;
             this.btnAdmUsuarios.Text = "Gerenciar Usuários";
-            this.btnAdmUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAdmUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAdmUsuarios.UseVisualStyleBackColor = false;
             this.btnAdmUsuarios.Click += new System.EventHandler(this.btnAdmUsuarios_Click);
             // 
@@ -193,16 +195,17 @@
             // 
             this.btnAdmNoticias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAdmNoticias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmNoticias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmNoticias.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmNoticias.ForeColor = System.Drawing.Color.White;
             this.btnAdmNoticias.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmNoticias.Image")));
+            this.btnAdmNoticias.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdmNoticias.Location = new System.Drawing.Point(222, 32);
-            this.btnAdmNoticias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdmNoticias.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdmNoticias.Name = "btnAdmNoticias";
-            this.btnAdmNoticias.Size = new System.Drawing.Size(149, 71);
+            this.btnAdmNoticias.Size = new System.Drawing.Size(149, 100);
             this.btnAdmNoticias.TabIndex = 4;
             this.btnAdmNoticias.Text = "Gerenciar Notícias";
-            this.btnAdmNoticias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAdmNoticias.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAdmNoticias.UseVisualStyleBackColor = false;
             // 
             // panel3
@@ -212,7 +215,7 @@
             this.panel3.Controls.Add(this.btnAdmUsuarios);
             this.panel3.Controls.Add(this.btnAdmNoticias);
             this.panel3.Location = new System.Drawing.Point(123, 236);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(594, 150);
             this.panel3.TabIndex = 11;
