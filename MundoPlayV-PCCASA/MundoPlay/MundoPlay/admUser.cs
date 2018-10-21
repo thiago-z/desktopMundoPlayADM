@@ -22,7 +22,7 @@ namespace MundoPlay
         {
             //Habilitar e dasabilitar conexoes
             //Cenexão Casa
-            conexao = @"Data Source=DESKTOP-73BU5RN\SQLEXPRESS;Initial Catalog=mundoPlay;Integrated Security=True";
+            conexao = @"Data Source=DESKTOP-73BU5RN\SQLEXPRESS;Initial Catalog=mundoPlay2;Integrated Security=True";
             //Cenexão Senac
             //conexao = "Data Source=TIT0517587W10-1;Initial Catalog=mundoPlay;Integrated Security=True";
         }
@@ -113,6 +113,7 @@ namespace MundoPlay
                     carregador["nome"].ToString(),
                     carregador["email"].ToString(),
                     carregador["usuario"].ToString(),
+                    carregador["imgAutor"].ToString(),
                     carregador["webmaster"].ToString());
             }
 
@@ -227,20 +228,41 @@ namespace MundoPlay
             btnAdicionarADM.Enabled = true;
             btnEditarUserADM.Enabled = true;
 
+            string fotoUserSelecionado = "C:/Users/storn/Documents/GitHub/desktopMundoPlayADM/MundoPlayV-PCCASA/MundoPlay/imagens/usuarios/";
 
+            if (dgvConsultaUser.CurrentRow.Cells[0].Value != null)
 
+            {
+                lblIdUser.Text =
+                    dgvConsultaUser.CurrentRow.Cells[0].Value.ToString();
+                lblUserSelecionado.Text =
+                    dgvConsultaUser.CurrentRow.Cells[1].Value.ToString();
+                lblEmailUserSelecionado.Text =
+                    dgvConsultaUser.CurrentRow.Cells[2].Value.ToString();
 
+                lblImgUser.Text =
+                    dgvConsultaUser.CurrentRow.Cells[4].Value.ToString();
+                picBoxUserSelecionado.ImageLocation = fotoUserSelecionado + lblImgUser.Text;
 
+                lblUserAdmin.Text =
+                    dgvConsultaUser.CurrentRow.Cells[5].Value.ToString();
 
+            }
 
+            if (lblUserAdmin.Text == "1")
+            {
+                lblAdmUserSelecionado.Text = "Administrador";
 
-            //URL da imagem Senac
-            //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
-            //URL da imagem Casa
-            String urlFoto = "C:/Users/storn/Documents/C#/desktopMundoPlayADM/MundoPlay/imagens/usuarios/";
+                btnRemoverADM.Enabled = true;
+                btnAdicionarADM.Enabled = false;
+            }
+            else
+            {
+                lblAdmUserSelecionado.Text = "Padrão";
+                btnRemoverADM.Enabled = false;
+                btnAdicionarADM.Enabled = true;
+            }
 
-            lblUserSelecionado.Text = Program.nomeUsuario;
-            picBoxUserSelecionado.ImageLocation = urlFoto + Program.fotoUsuario;
         }
 
         private void btnRemoverADM_Click(object sender, EventArgs e)
@@ -259,7 +281,7 @@ namespace MundoPlay
                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 String sql;
-                sql = "UPDATE login SET webmaster=0 WHERE idlogin=" + IdUsuarioSelecionado;
+                sql = "UPDATE login SET webmaster=0 WHERE idlogin=" + lblIdUser.Text;
                 ;
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = sql;
@@ -293,7 +315,7 @@ namespace MundoPlay
                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 String sql;
-                sql = "UPDATE login SET webmaster=1 WHERE idlogin=" + IdUsuarioSelecionado;
+                sql = "UPDATE login SET webmaster=1 WHERE idlogin=" + lblIdUser.Text;
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = sql;
                 cmd.CommandType = CommandType.Text;
@@ -355,5 +377,13 @@ namespace MundoPlay
         {
 
         }
+
+        private void picBoxUserSelecionado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
     }
 }

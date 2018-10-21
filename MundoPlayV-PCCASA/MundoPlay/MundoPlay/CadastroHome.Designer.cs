@@ -136,7 +136,7 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtAddTagLista = new System.Windows.Forms.TextBox();
             this.lstBoxTags = new System.Windows.Forms.ListBox();
             this.label36 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
@@ -1265,6 +1265,7 @@
             this.msktxtDataFilme.Size = new System.Drawing.Size(79, 20);
             this.msktxtDataFilme.TabIndex = 5;
             this.msktxtDataFilme.ValidatingType = typeof(System.DateTime);
+            this.msktxtDataFilme.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.msktxtDataFilme_MaskInputRejected);
             // 
             // label7
             // 
@@ -1424,7 +1425,7 @@
             // 
             this.panel23.Controls.Add(this.label37);
             this.panel23.Controls.Add(this.button9);
-            this.panel23.Controls.Add(this.textBox11);
+            this.panel23.Controls.Add(this.txtAddTagLista);
             this.panel23.Controls.Add(this.lstBoxTags);
             this.panel23.Controls.Add(this.label36);
             this.panel23.Location = new System.Drawing.Point(5, 307);
@@ -1453,16 +1454,16 @@
             this.button9.TabIndex = 9;
             this.button9.Text = "Incluir";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // textBox11
+            // txtAddTagLista
             // 
-            this.textBox11.Location = new System.Drawing.Point(109, 47);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(71, 20);
-            this.textBox11.TabIndex = 8;
-            this.textBox11.Text = "Tag";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAddTagLista.Location = new System.Drawing.Point(109, 47);
+            this.txtAddTagLista.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddTagLista.Name = "txtAddTagLista";
+            this.txtAddTagLista.Size = new System.Drawing.Size(71, 20);
+            this.txtAddTagLista.TabIndex = 8;
+            this.txtAddTagLista.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lstBoxTags
             // 
@@ -1473,6 +1474,7 @@
             this.lstBoxTags.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lstBoxTags.Size = new System.Drawing.Size(103, 69);
             this.lstBoxTags.TabIndex = 7;
+            this.lstBoxTags.SelectedIndexChanged += new System.EventHandler(this.lstBoxTags_SelectedIndexChanged);
             // 
             // label36
             // 
@@ -2030,7 +2032,7 @@
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtAddTagLista;
         private System.Windows.Forms.ListBox lstBoxTags;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel24;

@@ -80,18 +80,23 @@
             this.btnRemoverADM = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvConsultaUser = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gBoxEditarUser = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCancelarEditarUser = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.lblEmailUserSelecionado = new System.Windows.Forms.Label();
+            this.lblAdmUserSelecionado = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblIdUser = new System.Windows.Forms.Label();
+            this.lblImgUser = new System.Windows.Forms.Label();
+            this.lblUserAdmin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUserLogado)).BeginInit();
@@ -222,13 +227,13 @@
             this.btnCadastroUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastroUser.ForeColor = System.Drawing.Color.White;
             this.btnCadastroUser.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroUser.Image")));
-            this.btnCadastroUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastroUser.Location = new System.Drawing.Point(17, 83);
             this.btnCadastroUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastroUser.Name = "btnCadastroUser";
             this.btnCadastroUser.Size = new System.Drawing.Size(167, 40);
             this.btnCadastroUser.TabIndex = 13;
-            this.btnCadastroUser.Text = "Cadastrar usuários";
+            this.btnCadastroUser.Text = "Cadastrar usuário";
+            this.btnCadastroUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastroUser.UseVisualStyleBackColor = false;
             this.btnCadastroUser.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -246,6 +251,7 @@
             this.btnConsultaUser.Size = new System.Drawing.Size(167, 40);
             this.btnConsultaUser.TabIndex = 14;
             this.btnConsultaUser.Text = "Consultar usuários";
+            this.btnConsultaUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConsultaUser.UseVisualStyleBackColor = false;
             this.btnConsultaUser.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -533,10 +539,6 @@
             this.gBoxConsultaUser.BackColor = System.Drawing.Color.Transparent;
             this.gBoxConsultaUser.Controls.Add(this.panel6);
             this.gBoxConsultaUser.Controls.Add(this.panel5);
-            this.gBoxConsultaUser.Controls.Add(this.btnEditarUserADM);
-            this.gBoxConsultaUser.Controls.Add(this.btnAdicionarADM);
-            this.gBoxConsultaUser.Controls.Add(this.btnExcluirUser);
-            this.gBoxConsultaUser.Controls.Add(this.btnRemoverADM);
             this.gBoxConsultaUser.Controls.Add(this.label8);
             this.gBoxConsultaUser.Controls.Add(this.dgvConsultaUser);
             this.gBoxConsultaUser.Location = new System.Drawing.Point(227, 75);
@@ -550,41 +552,53 @@
             // 
             // panel6
             // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.lblUserAdmin);
+            this.panel6.Controls.Add(this.lblImgUser);
+            this.panel6.Controls.Add(this.lblIdUser);
+            this.panel6.Controls.Add(this.lblAdmUserSelecionado);
+            this.panel6.Controls.Add(this.lblEmailUserSelecionado);
             this.panel6.Controls.Add(this.lblUserSelecionado);
             this.panel6.Controls.Add(this.picBoxUserSelecionado);
+            this.panel6.Controls.Add(this.btnEditarUserADM);
             this.panel6.Controls.Add(this.label11);
-            this.panel6.Location = new System.Drawing.Point(123, 301);
+            this.panel6.Controls.Add(this.btnAdicionarADM);
+            this.panel6.Controls.Add(this.btnExcluirUser);
+            this.panel6.Controls.Add(this.btnRemoverADM);
+            this.panel6.Location = new System.Drawing.Point(308, 114);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(318, 91);
+            this.panel6.Size = new System.Drawing.Size(250, 332);
             this.panel6.TabIndex = 21;
             // 
             // lblUserSelecionado
             // 
-            this.lblUserSelecionado.AutoSize = true;
             this.lblUserSelecionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserSelecionado.Location = new System.Drawing.Point(88, 29);
+            this.lblUserSelecionado.Location = new System.Drawing.Point(6, 127);
             this.lblUserSelecionado.Name = "lblUserSelecionado";
-            this.lblUserSelecionado.Size = new System.Drawing.Size(196, 20);
+            this.lblUserSelecionado.Size = new System.Drawing.Size(236, 20);
             this.lblUserSelecionado.TabIndex = 20;
             this.lblUserSelecionado.Text = "Nome user selecionado";
+            this.lblUserSelecionado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picBoxUserSelecionado
             // 
             this.picBoxUserSelecionado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxUserSelecionado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBoxUserSelecionado.Location = new System.Drawing.Point(3, 7);
+            this.picBoxUserSelecionado.Location = new System.Drawing.Point(75, 21);
             this.picBoxUserSelecionado.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxUserSelecionado.Name = "picBoxUserSelecionado";
-            this.picBoxUserSelecionado.Size = new System.Drawing.Size(81, 79);
+            this.picBoxUserSelecionado.Size = new System.Drawing.Size(100, 100);
+            this.picBoxUserSelecionado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxUserSelecionado.TabIndex = 19;
             this.picBoxUserSelecionado.TabStop = false;
+            this.picBoxUserSelecionado.Click += new System.EventHandler(this.picBoxUserSelecionado_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(88, 10);
+            this.label11.Location = new System.Drawing.Point(64, 5);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(122, 13);
@@ -678,10 +692,10 @@
             this.btnEditarUserADM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEditarUserADM.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarUserADM.Image")));
             this.btnEditarUserADM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarUserADM.Location = new System.Drawing.Point(437, 397);
+            this.btnEditarUserADM.Location = new System.Drawing.Point(142, 276);
             this.btnEditarUserADM.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarUserADM.Name = "btnEditarUserADM";
-            this.btnEditarUserADM.Size = new System.Drawing.Size(120, 50);
+            this.btnEditarUserADM.Size = new System.Drawing.Size(100, 50);
             this.btnEditarUserADM.TabIndex = 17;
             this.btnEditarUserADM.Text = "Editar usuário";
             this.btnEditarUserADM.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -692,15 +706,16 @@
             // 
             this.btnAdicionarADM.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAdicionarADM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdicionarADM.Enabled = false;
             this.btnAdicionarADM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionarADM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnAdicionarADM.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarADM.Image")));
             this.btnAdicionarADM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdicionarADM.Location = new System.Drawing.Point(295, 397);
+            this.btnAdicionarADM.Location = new System.Drawing.Point(142, 218);
             this.btnAdicionarADM.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdicionarADM.Name = "btnAdicionarADM";
-            this.btnAdicionarADM.Size = new System.Drawing.Size(120, 50);
+            this.btnAdicionarADM.Size = new System.Drawing.Size(100, 50);
             this.btnAdicionarADM.TabIndex = 16;
             this.btnAdicionarADM.Text = "Tornar ADM";
             this.btnAdicionarADM.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -716,10 +731,10 @@
             this.btnExcluirUser.ForeColor = System.Drawing.Color.Red;
             this.btnExcluirUser.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluirUser.Image")));
             this.btnExcluirUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluirUser.Location = new System.Drawing.Point(9, 397);
+            this.btnExcluirUser.Location = new System.Drawing.Point(6, 276);
             this.btnExcluirUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcluirUser.Name = "btnExcluirUser";
-            this.btnExcluirUser.Size = new System.Drawing.Size(120, 50);
+            this.btnExcluirUser.Size = new System.Drawing.Size(100, 50);
             this.btnExcluirUser.TabIndex = 15;
             this.btnExcluirUser.Text = "Excluir Usuário";
             this.btnExcluirUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -730,15 +745,16 @@
             // 
             this.btnRemoverADM.BackColor = System.Drawing.Color.Goldenrod;
             this.btnRemoverADM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemoverADM.Enabled = false;
             this.btnRemoverADM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoverADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoverADM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnRemoverADM.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoverADM.Image")));
             this.btnRemoverADM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoverADM.Location = new System.Drawing.Point(152, 397);
+            this.btnRemoverADM.Location = new System.Drawing.Point(6, 218);
             this.btnRemoverADM.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoverADM.Name = "btnRemoverADM";
-            this.btnRemoverADM.Size = new System.Drawing.Size(120, 50);
+            this.btnRemoverADM.Size = new System.Drawing.Size(100, 50);
             this.btnRemoverADM.TabIndex = 14;
             this.btnRemoverADM.Text = "Remover ADM";
             this.btnRemoverADM.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -772,44 +788,10 @@
             this.dgvConsultaUser.Margin = new System.Windows.Forms.Padding(2);
             this.dgvConsultaUser.Name = "dgvConsultaUser";
             this.dgvConsultaUser.RowTemplate.Height = 28;
-            this.dgvConsultaUser.Size = new System.Drawing.Size(555, 182);
+            this.dgvConsultaUser.Size = new System.Drawing.Size(291, 332);
             this.dgvConsultaUser.TabIndex = 2;
             this.dgvConsultaUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaUser_click);
             this.dgvConsultaUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaUser_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nome";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Email";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Nome usuário";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Privilégio ADM";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Foto";
-            this.Column6.Name = "Column6";
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column6.Visible = false;
             // 
             // gBoxEditarUser
             // 
@@ -899,6 +881,91 @@
             this.label19.Size = new System.Drawing.Size(121, 20);
             this.label19.TabIndex = 1;
             this.label19.Text = "Editar usuário";
+            // 
+            // lblEmailUserSelecionado
+            // 
+            this.lblEmailUserSelecionado.Location = new System.Drawing.Point(7, 149);
+            this.lblEmailUserSelecionado.Name = "lblEmailUserSelecionado";
+            this.lblEmailUserSelecionado.Size = new System.Drawing.Size(235, 13);
+            this.lblEmailUserSelecionado.TabIndex = 21;
+            this.lblEmailUserSelecionado.Text = "email user";
+            this.lblEmailUserSelecionado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAdmUserSelecionado
+            // 
+            this.lblAdmUserSelecionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmUserSelecionado.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblAdmUserSelecionado.Location = new System.Drawing.Point(7, 170);
+            this.lblAdmUserSelecionado.Name = "lblAdmUserSelecionado";
+            this.lblAdmUserSelecionado.Size = new System.Drawing.Size(235, 13);
+            this.lblAdmUserSelecionado.TabIndex = 22;
+            this.lblAdmUserSelecionado.Text = "admin";
+            this.lblAdmUserSelecionado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 30;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Nome";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Email";
+            this.Column3.Name = "Column3";
+            this.Column3.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Nome usuário";
+            this.Column4.Name = "Column4";
+            this.Column4.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Privilégio ADM";
+            this.Column5.Name = "Column5";
+            this.Column5.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Foto";
+            this.Column6.Name = "Column6";
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column6.Visible = false;
+            // 
+            // lblIdUser
+            // 
+            this.lblIdUser.AutoSize = true;
+            this.lblIdUser.Location = new System.Drawing.Point(14, 74);
+            this.lblIdUser.Name = "lblIdUser";
+            this.lblIdUser.Size = new System.Drawing.Size(15, 13);
+            this.lblIdUser.TabIndex = 23;
+            this.lblIdUser.Text = "id";
+            // 
+            // lblImgUser
+            // 
+            this.lblImgUser.AutoSize = true;
+            this.lblImgUser.Location = new System.Drawing.Point(8, 101);
+            this.lblImgUser.Name = "lblImgUser";
+            this.lblImgUser.Size = new System.Drawing.Size(23, 13);
+            this.lblImgUser.TabIndex = 24;
+            this.lblImgUser.Text = "img";
+            // 
+            // lblUserAdmin
+            // 
+            this.lblUserAdmin.AutoSize = true;
+            this.lblUserAdmin.Location = new System.Drawing.Point(14, 59);
+            this.lblUserAdmin.Name = "lblUserAdmin";
+            this.lblUserAdmin.Size = new System.Drawing.Size(35, 13);
+            this.lblUserAdmin.TabIndex = 25;
+            this.lblUserAdmin.Text = "admin";
             // 
             // admUser
             // 
@@ -1007,11 +1074,16 @@
         private System.Windows.Forms.CheckBox ckbADM;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblUserSelecionado;
+        private System.Windows.Forms.Label lblAdmUserSelecionado;
+        private System.Windows.Forms.Label lblEmailUserSelecionado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Label lblIdUser;
+        private System.Windows.Forms.Label lblImgUser;
+        private System.Windows.Forms.Label lblUserAdmin;
     }
 }

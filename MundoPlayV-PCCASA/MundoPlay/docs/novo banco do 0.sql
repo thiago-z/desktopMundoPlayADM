@@ -52,7 +52,7 @@ CREATE TABLE filmes (
 	duracao int NULL,
 	poster varchar(45) NULL,
 	trailer varchar(45) NULL,
-	validar varchar(3) NULL
+	validar varchar(3) DEFAULT 'off'
 )
 
 

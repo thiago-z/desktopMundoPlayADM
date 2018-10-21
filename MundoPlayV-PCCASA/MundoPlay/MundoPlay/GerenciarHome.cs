@@ -55,7 +55,31 @@ namespace MundoPlay
 
         private void btnAdmTitulos_Click(object sender, EventArgs e)
         {
+            if(btnAdmFilme.Visible == false || btnAdmSerie.Visible == false || btnAdmGame.Visible == false)
+            {
+                lblAdmTitulos.Visible = true;
 
+                btnAdmFilme.Visible = true;
+                btnAdmSerie.Visible = true;
+                btnAdmGame.Visible = true;
+
+                btnAdmNoticias.Visible = false;
+                btnAdmUsuarios.Visible = false;
+            }
+            else if (btnAdmFilme.Visible == true || btnAdmSerie.Visible == true || btnAdmGame.Visible == true)
+            {
+                lblAdmTitulos.Visible = false;
+
+                btnAdmFilme.Visible = false;
+                btnAdmSerie.Visible = false;
+                btnAdmGame.Visible = false;
+
+                btnAdmNoticias.Visible = true;
+                btnAdmUsuarios.Visible = true;
+            }
+            
+            
+            
         }
 
         private void btnAdmUsuarios_Click(object sender, EventArgs e)
@@ -66,6 +90,19 @@ namespace MundoPlay
             admUser admUsuario = new admUser();
             admUsuario.ShowDialog();
 
+        }
+
+        private void btnAdmNoticias_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdmFilme_Click(object sender, EventArgs e)
+        {
+            //abrir tela de consulta de filmes
+            //instanciar
+            admFilme admFilme = new admFilme();
+            admFilme.ShowDialog();
         }
     }
 }

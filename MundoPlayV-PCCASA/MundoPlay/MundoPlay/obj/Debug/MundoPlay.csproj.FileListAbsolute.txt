@@ -76,3 +76,4 @@ C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\
 C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Debug\MundoPlay.csproj.CoreCompileInputs.cache
 C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Debug\MundoPlay.exe
 C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Debug\MundoPlay.pdb
+C:\Users\storn\Documents\GitHub\desktopMundoPlayADM\MundoPlayV-PCCASA\MundoPlay\MundoPlay\obj\Debug\MundoPlay.admFilme.resources

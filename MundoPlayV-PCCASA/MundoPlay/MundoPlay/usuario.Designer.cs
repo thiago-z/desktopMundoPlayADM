@@ -163,7 +163,7 @@
             // 
             // btnCadastro
             // 
-            this.btnCadastro.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCadastro.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.Silver;
@@ -181,7 +181,7 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnConsultar.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.Color.Silver;
@@ -199,7 +199,7 @@
             // 
             // btnGerenciar
             // 
-            this.btnGerenciar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnGerenciar.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnGerenciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerenciar.ForeColor = System.Drawing.Color.Silver;
@@ -229,7 +229,7 @@
             this.panel3.Location = new System.Drawing.Point(104, 138);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(594, 362);
+            this.panel3.Size = new System.Drawing.Size(594, 360);
             this.panel3.TabIndex = 6;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -266,7 +266,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(149, 9);
+            this.label2.Location = new System.Drawing.Point(136, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(326, 33);
             this.label2.TabIndex = 6;

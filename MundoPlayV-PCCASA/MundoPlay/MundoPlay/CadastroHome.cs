@@ -31,7 +31,8 @@ namespace MundoPlay
         String data;
         String hora;
 
-        
+        String dataFilmeId;
+
         String nomeFoto;
         String nomeFotoDestaque;
 
@@ -118,7 +119,7 @@ namespace MundoPlay
 
             {
 
-                lstBoxDiretor.Items.Add(rdr["nomeDiretor"]+" "+ rdr["sobrenomeDiretor"]);
+                lstBoxDiretor.Items.Add(rdr["iddiretores"] + " - " + rdr["nomeDiretor"]+" "+ rdr["sobrenomeDiretor"]);
 
             }
 
@@ -128,7 +129,7 @@ namespace MundoPlay
 
 
 
-            //Puxa os paises
+            //Puxa os paises em filmes
             string paises = @"SELECT * FROM paises";
 
             SqlCommand cmd1 = new SqlCommand(paises, dbConn);
@@ -141,7 +142,7 @@ namespace MundoPlay
 
             {
 
-                lstBoxPais.Items.Add(rdr1["nomePais"]);
+                lstBoxPais.Items.Add(rdr1["idpaises"] + " - " + rdr1["nomePais"]);
 
             }
 
@@ -149,7 +150,7 @@ namespace MundoPlay
 
             dbConn.Close();
 
-            //Puxa os paises
+            //Puxa os paises em séries
             string paisesS = @"SELECT * FROM paises";
 
             SqlCommand cmd10 = new SqlCommand(paisesS, dbConn);
@@ -162,7 +163,7 @@ namespace MundoPlay
 
             {
 
-                lstBoxPaisS.Items.Add(rdr10["nomePais"]);
+                lstBoxPaisS.Items.Add(rdr10["idpaises"] + " - " + rdr10["nomePais"]);
 
             }
 
@@ -171,7 +172,7 @@ namespace MundoPlay
             dbConn.Close();
 
 
-            //Puxa os generos
+            //Puxa os generos em filmes
             string generos = @"SELECT * FROM generos";
 
             SqlCommand cmd2 = new SqlCommand(generos, dbConn);
@@ -192,7 +193,7 @@ namespace MundoPlay
             dbConn.Close();
 
 
-            //Puxa os generos
+            //Puxa os generos em series
             string generosS = @"SELECT * FROM generos";
 
             SqlCommand cmd20 = new SqlCommand(generosS, dbConn);
@@ -205,7 +206,7 @@ namespace MundoPlay
 
             {
 
-                lstBoxGeneroS.Items.Add(rdr20["idgeneros"] + " - " + rdr20["nomegenero"]);
+                lstBoxGeneroS.Items.Add(rdr20["idgeneros"] + " - "+rdr20["nomegenero"]);
             }
 
             rdr1.Close();
@@ -227,7 +228,7 @@ namespace MundoPlay
 
             {
 
-                lstBoxEmissora.Items.Add(rdr3["nomeEmissora"]);
+                lstBoxEmissora.Items.Add(rdr3["idemissoras"]+" - "+rdr3["nomeEmissora"]);
 
             }
 
@@ -250,7 +251,7 @@ namespace MundoPlay
 
             {
 
-            lstBoxTags.Items.Add(rdr5["tag"]);
+            lstBoxTags.Items.Add(rdr5["idtags"]+"- "+rdr5["tag"]);
 
             }
 
@@ -340,6 +341,8 @@ namespace MundoPlay
             String sql;
             String sql1;
             String sql2;
+            String sql3;
+            String sql4;
             string aspas = "'";
 
 
@@ -398,49 +401,101 @@ namespace MundoPlay
             cmd3.ExecuteNonQuery();
 
 
-
-            SqlCommand cmd4 = new SqlCommand("INSERT INTO filme_genero (filme,genero) VALUES (@id_filme,@id_genero)", conn);
-            try
+            //Faz o loop pelos itens selecionados de generos em filmes
+            //Insere os ids dos generos na tabela relacionada
+            if (lstBoxGenero.SelectedItems.Count > 0)
             {
-                conn.Open();
 
-                for (int i = 0; i < lstBoxGenero.Items.Count; i++)
+                //Faz o loop pelos itens selecionados
+                foreach (object item in lstBoxGenero.SelectedItems)
                 {
+                    //convert item to string
+                    string checkedItem = item.ToString();
+                    string idGenero = checkedItem.Substring(0, 2);
 
-                    //Puxa o id do filme adicionado e atribui a variavel
+                    sql1 = "Insert into filme_genero(filme,genero) Values (@filme,@genero)";
+                    SqlCommand cmd4 = new SqlCommand();
+                    cmd4.CommandText = sql1;
+                    cmd4.CommandType = CommandType.Text;
+                    cmd4.Connection = conn;
 
-                    sql1 = "SELECT * FROM generos WHERE nomegenero = " + "'" + lstBoxGenero.Items + "'" + "";
-                    SqlCommand cmd5 = new SqlCommand();
-                    cmd5.CommandText = sql1;
-                    cmd5.CommandType = CommandType.Text;
-                    cmd5.Connection = conn;
+                    cmd4.Parameters.AddWithValue("@filme", idfilme); //add item
+                    cmd4.Parameters.AddWithValue("@genero", idGenero); //add item
+                    cmd4.ExecuteNonQuery();
 
-                    SqlDataReader carregador1;
-                    //execução do comando
-                    carregador1 = cmd5.ExecuteReader();
-                    //verificando se o registro foi encontrado     
-
-                    
-
-                    if (carregador1.Read())
-                    {
-                        idgenero = carregador1["idgeneros"].ToString();
-
-                    }
-
-                    carregador.Close();
-
-                    cmd.Parameters.AddWithValue("@id_filme", idfilme);
-                    cmd.Parameters.AddWithValue("@id_genero", idgenero[i]);
-                    cmd.ExecuteNonQuery();
                 }
+
+                //close connection
                 conn.Close();
+                MessageBox.Show("Genêros foram adicionados!");
             }
-            catch (Exception)
+
+            //Abrir conexão para o proximo insert relacionado
+            conn.Open();
+
+            //Faz o loop pelos itens selecionados de diretores em filmes
+            //Insere os ids dos generos na tabela relacionada
+            if (lstBoxDiretor.SelectedItems.Count > 0)
             {
+
+                //Faz o loop pelos itens selecionados
+                foreach (object item in lstBoxDiretor.SelectedItems)
+                {
+                    //convert item to string
+                    string checkedItem = item.ToString();
+                    string idDiretor = checkedItem.Substring(0, 2);
+
+                    sql1 = "Insert into filme_diretor(filme,diretor) Values (@filme,@diretor)";
+                    SqlCommand cmd4 = new SqlCommand();
+                    cmd4.CommandText = sql1;
+                    cmd4.CommandType = CommandType.Text;
+                    cmd4.Connection = conn;
+
+                    cmd4.Parameters.AddWithValue("@filme", idfilme); //add item
+                    cmd4.Parameters.AddWithValue("@diretor", idDiretor); //add item
+                    cmd4.ExecuteNonQuery();
+
+                }
+
+                //close connection
                 conn.Close();
-                
+                MessageBox.Show("Diretores foram adicionados!");
             }
+
+            //Abrir conexão para o proximo insert relacionado
+            conn.Open();
+
+            //Faz o loop pelos itens selecionados de paises em filmes
+            //Insere os ids dos generos na tabela relacionada
+            if (lstBoxPais.SelectedItems.Count > 0)
+            {
+
+                //Faz o loop pelos itens selecionados
+                foreach (object item in lstBoxPais.SelectedItems)
+                {
+                    //convert item to string
+                    string checkedItem = item.ToString();
+                    string idPais = checkedItem.Substring(0, 2);
+
+                    sql1 = "Insert into filme_pais(filme,pais) Values (@filme,@pais)";
+                    SqlCommand cmd4 = new SqlCommand();
+                    cmd4.CommandText = sql1;
+                    cmd4.CommandType = CommandType.Text;
+                    cmd4.Connection = conn;
+
+                    cmd4.Parameters.AddWithValue("@filme", idfilme); //add item
+                    cmd4.Parameters.AddWithValue("@pais", idPais); //add item
+                    cmd4.ExecuteNonQuery();
+
+                }
+
+                //close connection
+                conn.Close();
+                MessageBox.Show("Paises foram adicionados!");
+            }
+
+
+            
 
             //Mostra mensagem se tudo correr como deveria
             MessageBox.Show("Filme inserido com sucesso!", "Informação",
@@ -501,8 +556,9 @@ namespace MundoPlay
             MessageBoxButtons.OK,
             MessageBoxIcon.Exclamation);
 
-            lstBoxDiretor.Refresh();
-
+            atualizaGridDiretor();
+            txtAddDiretorNomeLista.Clear();
+            txtAddDiretorSobrenomeLista.Clear();
         }
 
         private void btnAddPaisLista_Click(object sender, EventArgs e)
@@ -533,7 +589,8 @@ namespace MundoPlay
             MessageBoxIcon.Exclamation);
 
 
-            lstBoxPais.Update();
+            atualizaGridPaises();
+            txtAddPaisLista.Clear();
         }
 
         private void btnAddGeneroLista_Click(object sender, EventArgs e)
@@ -564,7 +621,8 @@ namespace MundoPlay
             MessageBoxIcon.Exclamation);
 
 
-            lstBoxGenero.Update();
+            atualizaGridGeneros();
+            txtAddGeneroLista.Clear();
         }
 
         private void btnCadastroNoticia_Click(object sender, EventArgs e)
@@ -986,6 +1044,170 @@ namespace MundoPlay
                 // image file path  
                 lblCaminhoFotoF.Text = open.FileName;
             }
+        }
+
+        private void msktxtDataFilme_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            conectar();
+            // conectando com o banco 
+            SqlConnection conn = new SqlConnection(conexao);
+
+            // abrindo conexão
+            conn.Open();
+            String sql;
+            string aspas = "'";
+
+            //Inserindo novos diretores
+            sql = "INSERT INTO tags (tag)";
+            sql = sql + "VALUES (";
+            sql = sql + aspas + txtAddTagLista.Text;
+            sql = sql + aspas + ")";
+
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = sql;
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Nova tag inserida com sucesso!", "Informação",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Exclamation);
+
+            atualizaGridTags();
+            txtAddTagLista.Clear();
+        }
+
+        private void lstBoxTags_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //Atualiza a lista de tags após nova inserção
+        private void atualizaGridTags()
+        {
+
+            conectar();
+            // conectando com o banco 
+            SqlConnection conn = new SqlConnection(conexao);
+
+            string sql;
+            sql = @"SELECT * FROM tags";
+            
+
+            //execução do comando
+            SqlCommand cmd5 = new SqlCommand(sql, conn);
+
+            conn.Open();
+
+            SqlDataReader rdr5 = cmd5.ExecuteReader();
+
+            lstBoxTags.Items.Clear();
+            while (rdr5.Read())
+
+            {
+
+                lstBoxTags.Items.Add(rdr5["idtags"] + "- " + rdr5["tag"]);
+
+            }
+
+            conn.Close();
+        }
+
+        //Atualiza a lista de diretores após nova inserção
+        private void atualizaGridDiretor()
+        {
+
+            conectar();
+            // conectando com o banco 
+            SqlConnection conn = new SqlConnection(conexao);
+
+
+            string diretores = @"SELECT * FROM diretores";
+
+            SqlCommand cmd = new SqlCommand(diretores, conn);
+
+            conn.Open();
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+
+            lstBoxDiretor.Items.Clear();
+            while (rdr.Read())
+
+            {
+
+                lstBoxDiretor.Items.Add(rdr["iddiretores"] + " - " + rdr["nomeDiretor"] + " " + rdr["sobrenomeDiretor"]);
+
+            }
+
+            conn.Close();
+        }
+
+
+        //Atualiza a lista de paises após nova inserção
+        private void atualizaGridPaises()
+        {
+
+            conectar();
+            // conectando com o banco 
+            SqlConnection conn = new SqlConnection(conexao);
+
+
+            string paises = @"SELECT * FROM paises";
+
+            SqlCommand cmd1 = new SqlCommand(paises, conn);
+
+            conn.Open();
+
+            SqlDataReader rdr1 = cmd1.ExecuteReader();
+
+            lstBoxPais.Items.Clear();
+
+            while (rdr1.Read())
+
+            {
+
+                lstBoxPais.Items.Add(rdr1["idpaises"] + " - " + rdr1["nomePais"]);
+
+            }
+
+            conn.Close();
+        }
+
+
+        //Atualiza a lista de generos após nova inserção
+        private void atualizaGridGeneros()
+        {
+
+            conectar();
+            // conectando com o banco 
+            SqlConnection conn = new SqlConnection(conexao);
+
+
+            string generos = @"SELECT * FROM generos";
+
+            SqlCommand cmd2 = new SqlCommand(generos, conn);
+
+            conn.Open();
+
+            SqlDataReader rdr2 = cmd2.ExecuteReader();
+
+
+            lstBoxGenero.Items.Clear();
+
+            while (rdr2.Read())
+
+            {
+
+                lstBoxGenero.Items.Add(rdr2["idgeneros"] + " - " + rdr2["nomegenero"]);
+            }
+
+            conn.Close();
         }
     }
 }
