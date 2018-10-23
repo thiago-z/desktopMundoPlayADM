@@ -141,11 +141,9 @@
             this.label36 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.ckbGame = new System.Windows.Forms.CheckBox();
-            this.ckbSerie = new System.Windows.Forms.CheckBox();
-            this.ckbCinema = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.cmbTituloRelac = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.lblCaminhoNoticiaDestaque = new System.Windows.Forms.Label();
@@ -1496,52 +1494,33 @@
             // 
             // panel22
             // 
-            this.panel22.Controls.Add(this.ckbGame);
-            this.panel22.Controls.Add(this.ckbSerie);
-            this.panel22.Controls.Add(this.ckbCinema);
+            this.panel22.Controls.Add(this.comboBox1);
+            this.panel22.Controls.Add(this.checkBox1);
             this.panel22.Controls.Add(this.label31);
-            this.panel22.Controls.Add(this.cmbTituloRelac);
             this.panel22.Controls.Add(this.label30);
             this.panel22.Location = new System.Drawing.Point(313, 307);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(245, 96);
             this.panel22.TabIndex = 23;
             // 
-            // ckbGame
+            // comboBox1
             // 
-            this.ckbGame.AutoSize = true;
-            this.ckbGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbGame.ForeColor = System.Drawing.Color.White;
-            this.ckbGame.Location = new System.Drawing.Point(176, 27);
-            this.ckbGame.Name = "ckbGame";
-            this.ckbGame.Size = new System.Drawing.Size(65, 17);
-            this.ckbGame.TabIndex = 33;
-            this.ckbGame.Text = " GAME";
-            this.ckbGame.UseVisualStyleBackColor = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(8, 71);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(229, 21);
+            this.comboBox1.TabIndex = 32;
             // 
-            // ckbSerie
+            // checkBox1
             // 
-            this.ckbSerie.AutoSize = true;
-            this.ckbSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbSerie.ForeColor = System.Drawing.Color.White;
-            this.ckbSerie.Location = new System.Drawing.Point(93, 27);
-            this.ckbSerie.Name = "ckbSerie";
-            this.ckbSerie.Size = new System.Drawing.Size(67, 17);
-            this.ckbSerie.TabIndex = 32;
-            this.ckbSerie.Text = " SÉRIE";
-            this.ckbSerie.UseVisualStyleBackColor = true;
-            // 
-            // ckbCinema
-            // 
-            this.ckbCinema.AutoSize = true;
-            this.ckbCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbCinema.ForeColor = System.Drawing.Color.White;
-            this.ckbCinema.Location = new System.Drawing.Point(8, 27);
-            this.ckbCinema.Name = "ckbCinema";
-            this.ckbCinema.Size = new System.Drawing.Size(77, 17);
-            this.ckbCinema.TabIndex = 31;
-            this.ckbCinema.Text = " CINEMA";
-            this.ckbCinema.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(8, 23);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(67, 17);
+            this.checkBox1.TabIndex = 31;
+            this.checkBox1.Text = "CINEMA";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckStateChanged += new System.EventHandler(this.carregarFilmes);
             // 
             // label31
             // 
@@ -1553,14 +1532,6 @@
             this.label31.Size = new System.Drawing.Size(109, 13);
             this.label31.TabIndex = 30;
             this.label31.Text = "Mídia relacionada";
-            // 
-            // cmbTituloRelac
-            // 
-            this.cmbTituloRelac.FormattingEnabled = true;
-            this.cmbTituloRelac.Location = new System.Drawing.Point(7, 71);
-            this.cmbTituloRelac.Name = "cmbTituloRelac";
-            this.cmbTituloRelac.Size = new System.Drawing.Size(233, 21);
-            this.cmbTituloRelac.TabIndex = 2;
             // 
             // label30
             // 
@@ -1651,6 +1622,7 @@
             this.picBoxNoticiaDestaque.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxNoticiaDestaque.TabIndex = 23;
             this.picBoxNoticiaDestaque.TabStop = false;
+            this.picBoxNoticiaDestaque.Click += new System.EventHandler(this.picBoxNoticiaDestaque_Click);
             // 
             // lblCaminhoNoticia
             // 
@@ -1830,10 +1802,10 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.gBoxCadastrarFilme);
-            this.Controls.Add(this.gBoxCadastrarSerie);
             this.Controls.Add(this.gBoxCadastrarNoticia);
             this.Controls.Add(this.gBoxCadastrarGame);
+            this.Controls.Add(this.gBoxCadastrarFilme);
+            this.Controls.Add(this.gBoxCadastrarSerie);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CadastroHome";
@@ -2037,13 +2009,11 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.ComboBox cmbTituloRelac;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.CheckBox ckbGame;
-        private System.Windows.Forms.CheckBox ckbSerie;
-        private System.Windows.Forms.CheckBox ckbCinema;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.RichTextBox richtxtTextoNoticia;
         private System.Windows.Forms.Label lblDataHoraAtual;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

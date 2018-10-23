@@ -59,7 +59,7 @@ namespace MundoPlay
             //URL da imagem Senac
             //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
             //URL da imagem Casa
-            String urlFoto = "C:/Users/storn/Documents/C#/desktopMundoPlayADM/MundoPlay/imagens/usuarios/";
+            String urlFoto = "C:/Users/storn/Documents/GitHub/desktopMundoPlayADM/MundoPlayV-PCCASA/MundoPlay/imagens/usuarios/";
 
             nomeUserLogado.Text = Program.nomeUsuario;
             fotoUserLogado.ImageLocation = urlFoto + Program.fotoUsuario; 
@@ -217,12 +217,6 @@ namespace MundoPlay
         private void dgvConsultaUser_click(object sender, DataGridViewCellEventArgs e)
         {
 
-
-
-        }
-
-        private void dgvConsultaUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
             btnExcluirUser.Enabled = true;
             btnRemoverADM.Enabled = true;
             btnAdicionarADM.Enabled = true;
@@ -264,6 +258,8 @@ namespace MundoPlay
             }
 
         }
+
+    
 
         private void btnRemoverADM_Click(object sender, EventArgs e)
         {

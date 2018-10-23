@@ -245,7 +245,7 @@
             this.dgvConsultaFilmes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvConsultaFilmes.Size = new System.Drawing.Size(244, 393);
             this.dgvConsultaFilmes.TabIndex = 18;
-            this.dgvConsultaFilmes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.carregarFilmeAdm);
+            this.dgvConsultaFilmes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.carregarFilmeAdm1);
             // 
             // Column1
             // 
@@ -580,6 +580,7 @@
             this.lblGenerosFilme.Size = new System.Drawing.Size(251, 29);
             this.lblGenerosFilme.TabIndex = 4;
             this.lblGenerosFilme.Text = "lista de diretores";
+            this.lblGenerosFilme.Click += new System.EventHandler(this.lblGenerosFilme_Click);
             // 
             // label8
             // 

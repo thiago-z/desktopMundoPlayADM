@@ -7,12 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 
 namespace MundoPlay
 {
     public partial class GerenciarHome : Form
     {
+
+        //URL da imagem Senac
+        //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
+        //URL da imagem Casa
+        String urlFoto = "C:/Users/storn/Documents/GitHub/desktopMundoPlayADM/MundoPlayV-PCCASA/MundoPlay/imagens/usuarios/";
+
+
         public GerenciarHome()
         {
             InitializeComponent();
@@ -41,12 +49,6 @@ namespace MundoPlay
                 admUserLogado.Text = "Commun";
             }
 
-            //URL da imagem Senac
-            //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
-            //URL da imagem Casa
-            String urlFoto = "C:/Users/storn/Documents/C#/desktopMundoPlayADM/MundoPlay/imagens/usuarios/";
-
-
             nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
             fotoUserLogado.ImageLocation = urlFoto + MundoPlay.Program.fotoUsuario;
 
@@ -55,9 +57,12 @@ namespace MundoPlay
 
         private void btnAdmTitulos_Click(object sender, EventArgs e)
         {
-            if(btnAdmFilme.Visible == false || btnAdmSerie.Visible == false || btnAdmGame.Visible == false)
+
+
+            if (btnAdmFilme.Visible == false || btnAdmSerie.Visible == false || btnAdmGame.Visible == false)
             {
                 lblAdmTitulos.Visible = true;
+                btnAdmTitulos.BackColor = Color.Gray;
 
                 btnAdmFilme.Visible = true;
                 btnAdmSerie.Visible = true;
@@ -69,6 +74,7 @@ namespace MundoPlay
             else if (btnAdmFilme.Visible == true || btnAdmSerie.Visible == true || btnAdmGame.Visible == true)
             {
                 lblAdmTitulos.Visible = false;
+                btnAdmTitulos.BackColor = Color.SlateGray;
 
                 btnAdmFilme.Visible = false;
                 btnAdmSerie.Visible = false;
@@ -103,6 +109,7 @@ namespace MundoPlay
             //instanciar
             admFilme admFilme = new admFilme();
             admFilme.ShowDialog();
+
         }
     }
 }

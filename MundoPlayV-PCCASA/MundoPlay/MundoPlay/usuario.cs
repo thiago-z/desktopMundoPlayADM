@@ -13,6 +13,11 @@ namespace MundoPlay
 {
     public partial class usuario : Form
     {
+        //URL da imagem Senac
+        //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
+        //URL da imagem Casa
+        String urlFoto = "C:/Users/storn/Documents/Github/desktopMundoPlayADM/MundoPlayV-PCCASA/MundoPlay/imagens/usuarios/";
+
         public usuario()
         {
             InitializeComponent();
@@ -63,10 +68,6 @@ namespace MundoPlay
                 btnGerenciar.Enabled = false;
             }
 
-            //URL da imagem Senac
-            //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
-            //URL da imagem Casa
-            String urlFoto = "C:/Users/storn/Documents/C#/desktopMundoPlayADM/MundoPlay/imagens/usuarios/";
 
             nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
             fotoUserLogado.ImageLocation = urlFoto + MundoPlay.Program.fotoUsuario;

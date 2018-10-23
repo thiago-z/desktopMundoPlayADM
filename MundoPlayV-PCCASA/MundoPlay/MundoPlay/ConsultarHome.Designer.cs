@@ -43,6 +43,12 @@
             this.btnConsultaSeries = new System.Windows.Forms.Button();
             this.btnConsultaFilmes = new System.Windows.Forms.Button();
             this.gBoxConsultaFilme = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblNomeFoto = new System.Windows.Forms.Label();
+            this.lblIdFilme = new System.Windows.Forms.Label();
+            this.lblSubtituloFilmeSelec = new System.Windows.Forms.Label();
+            this.lblTituloFilmeSelec = new System.Windows.Forms.Label();
+            this.picBoxFilmeSelec = new System.Windows.Forms.PictureBox();
             this.btnEditarUserADM = new System.Windows.Forms.Button();
             this.btnAdicionarADM = new System.Windows.Forms.Button();
             this.btnExcluirUser = new System.Windows.Forms.Button();
@@ -51,16 +57,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnBuscaUser = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.picBoxFilmeSelec = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvConsultaFilmes = new System.Windows.Forms.DataGridView();
-            this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblTituloFilmeSelec = new System.Windows.Forms.Label();
-            this.lblSubtituloFilmeSelec = new System.Windows.Forms.Label();
-            this.lblIdFilme = new System.Windows.Forms.Label();
-            this.lblNomeFoto = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,16 +68,18 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUserLogado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.gBoxConsultaFilme.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxFilmeSelec)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaFilmes)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFilmeSelec)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaFilmes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -280,6 +280,71 @@
             this.gBoxConsultaFilme.TabStop = false;
             this.gBoxConsultaFilme.Visible = false;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.lblNomeFoto);
+            this.panel3.Controls.Add(this.lblIdFilme);
+            this.panel3.Controls.Add(this.lblSubtituloFilmeSelec);
+            this.panel3.Controls.Add(this.lblTituloFilmeSelec);
+            this.panel3.Controls.Add(this.picBoxFilmeSelec);
+            this.panel3.Location = new System.Drawing.Point(295, 114);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(262, 253);
+            this.panel3.TabIndex = 25;
+            // 
+            // lblNomeFoto
+            // 
+            this.lblNomeFoto.AutoSize = true;
+            this.lblNomeFoto.Location = new System.Drawing.Point(107, 136);
+            this.lblNomeFoto.Name = "lblNomeFoto";
+            this.lblNomeFoto.Size = new System.Drawing.Size(62, 13);
+            this.lblNomeFoto.TabIndex = 23;
+            this.lblNomeFoto.Text = "nomeposter";
+            // 
+            // lblIdFilme
+            // 
+            this.lblIdFilme.AutoSize = true;
+            this.lblIdFilme.Location = new System.Drawing.Point(123, 122);
+            this.lblIdFilme.Name = "lblIdFilme";
+            this.lblIdFilme.Size = new System.Drawing.Size(36, 13);
+            this.lblIdFilme.TabIndex = 22;
+            this.lblIdFilme.Text = "idfilme";
+            // 
+            // lblSubtituloFilmeSelec
+            // 
+            this.lblSubtituloFilmeSelec.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSubtituloFilmeSelec.Location = new System.Drawing.Point(4, 214);
+            this.lblSubtituloFilmeSelec.Name = "lblSubtituloFilmeSelec";
+            this.lblSubtituloFilmeSelec.Size = new System.Drawing.Size(252, 32);
+            this.lblSubtituloFilmeSelec.TabIndex = 21;
+            this.lblSubtituloFilmeSelec.Text = "Subtitulo";
+            this.lblSubtituloFilmeSelec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTituloFilmeSelec
+            // 
+            this.lblTituloFilmeSelec.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloFilmeSelec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloFilmeSelec.Location = new System.Drawing.Point(4, 187);
+            this.lblTituloFilmeSelec.Name = "lblTituloFilmeSelec";
+            this.lblTituloFilmeSelec.Size = new System.Drawing.Size(252, 32);
+            this.lblTituloFilmeSelec.TabIndex = 20;
+            this.lblTituloFilmeSelec.Text = "Título";
+            this.lblTituloFilmeSelec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picBoxFilmeSelec
+            // 
+            this.picBoxFilmeSelec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxFilmeSelec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBoxFilmeSelec.Location = new System.Drawing.Point(74, 2);
+            this.picBoxFilmeSelec.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxFilmeSelec.Name = "picBoxFilmeSelec";
+            this.picBoxFilmeSelec.Size = new System.Drawing.Size(120, 180);
+            this.picBoxFilmeSelec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxFilmeSelec.TabIndex = 19;
+            this.picBoxFilmeSelec.TabStop = false;
+            // 
             // btnEditarUserADM
             // 
             this.btnEditarUserADM.BackColor = System.Drawing.Color.DarkGray;
@@ -396,18 +461,6 @@
             this.textBox2.Size = new System.Drawing.Size(116, 22);
             this.textBox2.TabIndex = 25;
             // 
-            // picBoxFilmeSelec
-            // 
-            this.picBoxFilmeSelec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxFilmeSelec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBoxFilmeSelec.Location = new System.Drawing.Point(74, 2);
-            this.picBoxFilmeSelec.Margin = new System.Windows.Forms.Padding(2);
-            this.picBoxFilmeSelec.Name = "picBoxFilmeSelec";
-            this.picBoxFilmeSelec.Size = new System.Drawing.Size(120, 180);
-            this.picBoxFilmeSelec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxFilmeSelec.TabIndex = 19;
-            this.picBoxFilmeSelec.TabStop = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -441,84 +494,7 @@
             this.dgvConsultaFilmes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvConsultaFilmes.Size = new System.Drawing.Size(265, 253);
             this.dgvConsultaFilmes.TabIndex = 2;
-            this.dgvConsultaFilmes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dadosFilmeSelec);
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btnVoltar.Location = new System.Drawing.Point(706, 545);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(86, 28);
-            this.btnVoltar.TabIndex = 20;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.ForeColor = System.Drawing.Color.Black;
-            this.btnSair.Location = new System.Drawing.Point(8, 545);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(86, 28);
-            this.btnSair.TabIndex = 19;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.lblNomeFoto);
-            this.panel3.Controls.Add(this.lblIdFilme);
-            this.panel3.Controls.Add(this.lblSubtituloFilmeSelec);
-            this.panel3.Controls.Add(this.lblTituloFilmeSelec);
-            this.panel3.Controls.Add(this.picBoxFilmeSelec);
-            this.panel3.Location = new System.Drawing.Point(295, 114);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(262, 253);
-            this.panel3.TabIndex = 25;
-            // 
-            // lblTituloFilmeSelec
-            // 
-            this.lblTituloFilmeSelec.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTituloFilmeSelec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloFilmeSelec.Location = new System.Drawing.Point(4, 187);
-            this.lblTituloFilmeSelec.Name = "lblTituloFilmeSelec";
-            this.lblTituloFilmeSelec.Size = new System.Drawing.Size(252, 32);
-            this.lblTituloFilmeSelec.TabIndex = 20;
-            this.lblTituloFilmeSelec.Text = "Título";
-            this.lblTituloFilmeSelec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblSubtituloFilmeSelec
-            // 
-            this.lblSubtituloFilmeSelec.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSubtituloFilmeSelec.Location = new System.Drawing.Point(4, 214);
-            this.lblSubtituloFilmeSelec.Name = "lblSubtituloFilmeSelec";
-            this.lblSubtituloFilmeSelec.Size = new System.Drawing.Size(252, 32);
-            this.lblSubtituloFilmeSelec.TabIndex = 21;
-            this.lblSubtituloFilmeSelec.Text = "Subtitulo";
-            this.lblSubtituloFilmeSelec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblIdFilme
-            // 
-            this.lblIdFilme.AutoSize = true;
-            this.lblIdFilme.Location = new System.Drawing.Point(123, 122);
-            this.lblIdFilme.Name = "lblIdFilme";
-            this.lblIdFilme.Size = new System.Drawing.Size(36, 13);
-            this.lblIdFilme.TabIndex = 22;
-            this.lblIdFilme.Text = "idfilme";
-            // 
-            // lblNomeFoto
-            // 
-            this.lblNomeFoto.AutoSize = true;
-            this.lblNomeFoto.Location = new System.Drawing.Point(107, 136);
-            this.lblNomeFoto.Name = "lblNomeFoto";
-            this.lblNomeFoto.Size = new System.Drawing.Size(62, 13);
-            this.lblNomeFoto.TabIndex = 23;
-            this.lblNomeFoto.Text = "nomeposter";
+            this.dgvConsultaFilmes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dadosFilmeSelec1);
             // 
             // Column1
             // 
@@ -576,6 +552,30 @@
             this.Column8.Name = "Column8";
             this.Column8.Visible = false;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.ForeColor = System.Drawing.Color.Black;
+            this.btnVoltar.Location = new System.Drawing.Point(706, 545);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(86, 28);
+            this.btnVoltar.TabIndex = 20;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.ForeColor = System.Drawing.Color.Black;
+            this.btnSair.Location = new System.Drawing.Point(8, 545);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(86, 28);
+            this.btnSair.TabIndex = 19;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // ConsultarHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,12 +606,12 @@
             this.panel4.PerformLayout();
             this.gBoxConsultaFilme.ResumeLayout(false);
             this.gBoxConsultaFilme.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxFilmeSelec)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaFilmes)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFilmeSelec)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaFilmes)).EndInit();
             this.ResumeLayout(false);
 
         }

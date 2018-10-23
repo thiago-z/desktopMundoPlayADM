@@ -21,7 +21,7 @@ namespace MundoPlay
         int midiaCinema = 1;
         int midiaSerie = 2;
         int midiaGame = 3;
-        int tipoMidia;
+        String tipoMidia;
 
         String idfilme;
         String idserie;
@@ -70,6 +70,7 @@ namespace MundoPlay
 
         private void CadastroHome_Load(object sender, EventArgs e)
         {
+
             //Mostra data e hora no form
             //Capturar hora
             hora = DateTime.Now.ToShortTimeString();
@@ -96,7 +97,7 @@ namespace MundoPlay
             //URL da imagem Senac
             //String urlFoto = "C:/Users/thiago.silva5/Desktop/programa_c#/MundoPlay/imagens/usuarios/";
             //URL da imagem Casa
-            String urlFoto = "C:/Users/storn/Documents/C#/desktopMundoPlayADM/MundoPlay/imagens/usuarios/";
+            String urlFoto = "C:/Users/storn/Documents/Github/desktopMundoPlayADM/MundoPlayV-PCCASA/MundoPlay/imagens/usuarios/";
 
 
             nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
@@ -647,6 +648,8 @@ namespace MundoPlay
             else
             {
                 btnImgNoticiaDestaque.Enabled = false;
+                picBoxNoticiaDestaque.Image = null;
+                nomeFotoDestaque = null;
             }
         }
 
@@ -689,174 +692,11 @@ namespace MundoPlay
 
         }
 
-      
-
-        private void carregaTituloRelacF(object sender, EventArgs e)
-        {
-
-            if (ckbCinema.Checked)
-            {
-                ckbCinema.Enabled = true;
-                ckbSerie.Enabled = false;
-                ckbGame.Enabled = false;
-
-                cmbTituloRelac.Items.Clear();
-
-                string connStr = @"Data Source=DESKTOP-73BU5RN\SQLEXPRESS;Initial Catalog=mundoPlay;Integrated Security=True";
-
-                SqlConnection dbConn = new SqlConnection(connStr);
-
-                string filmes = @"SELECT * FROM filmes";
-
-                SqlCommand cmd4 = new SqlCommand(filmes, dbConn);
-
-                dbConn.Open();
-
-                SqlDataReader rdr4 = cmd4.ExecuteReader();
-
-                while (rdr4.Read())
-
-                {
-
-                    cmbTituloRelac.Items.Add(rdr4["titulo"]);
-
-                }
-
-               
-
-                dbConn.Close();
-
-
-            }
-            else
-            {
-                ckbCinema.Enabled = true;
-                ckbSerie.Enabled = true;
-                ckbGame.Enabled = true;
-
-                cmbTituloRelac.Items.Clear();
-            }
-            
-            
-        }
-
-        private void carregaTituloRelacS(object sender, EventArgs e)
-        {
-            if (ckbSerie.Checked)
-            {
-                ckbCinema.Enabled = false;
-                ckbSerie.Enabled = true;
-                ckbGame.Enabled = false;
-
-                cmbTituloRelac.Items.Clear();
-
-                string connStr = @"Data Source=DESKTOP-73BU5RN\SQLEXPRESS;Initial Catalog=mundoPlay;Integrated Security=True";
-
-                SqlConnection dbConn = new SqlConnection(connStr);
-
-                string series = @"SELECT * FROM series";
-
-                SqlCommand cmd4 = new SqlCommand(series, dbConn);
-
-                dbConn.Open();
-
-                SqlDataReader rdr4 = cmd4.ExecuteReader();
-
-                while (rdr4.Read())
-
-                {
-
-                    cmbTituloRelac.Items.Add(rdr4["titulo"]);
-
-                }
-
-
-
-                dbConn.Close();
-
-            }
-            else
-            {
-                ckbCinema.Enabled = true;
-                ckbSerie.Enabled = true;
-                ckbGame.Enabled = true;
-
-                cmbTituloRelac.Items.Clear();
-            }
-        }
-
-        private void carregaTituloRelacG(object sender, EventArgs e)
-        {
-            if (ckbGame.Checked)
-            {
-                ckbCinema.Enabled = false;
-                ckbSerie.Enabled = false;
-                ckbGame.Enabled = true;
-
-                cmbTituloRelac.Items.Clear();
-
-                string connStr = @"Data Source=DESKTOP-73BU5RN\SQLEXPRESS;Initial Catalog=mundoPlay;Integrated Security=True";
-
-                SqlConnection dbConn = new SqlConnection(connStr);
-
-                string games = @"SELECT * FROM games";
-
-                SqlCommand cmd4 = new SqlCommand(games, dbConn);
-
-                dbConn.Open();
-
-                SqlDataReader rdr4 = cmd4.ExecuteReader();
-
-                while (rdr4.Read())
-
-                {
-
-                    cmbTituloRelac.Items.Add(rdr4["titulo"]);
-
-                }
-
-
-
-                dbConn.Close();
-
-            }
-            else
-            {
-                ckbCinema.Enabled = true;
-                ckbSerie.Enabled = true;
-                ckbGame.Enabled = true;
-
-                cmbTituloRelac.Items.Clear();
-            }
-        }
 
        
 
         private void btnCadastrarNoticiaBD_Click(object sender, EventArgs e)
         {
-
-
-            if (ckbDestaqueNoticia.Checked)
-            {
-                destacarNoticia = "on";
-            }
-
-            
-
-            if (ckbCinema.Checked)
-            {
-                tipoMidia = midiaCinema;
-            }
-            if (ckbSerie.Checked)
-            {
-                tipoMidia = midiaSerie;
-            }
-            if (ckbGame.Checked)
-            {
-                tipoMidia = midiaGame;
-            }
-
-
 
             conectar();
             // conectando com o banco 
@@ -869,9 +709,24 @@ namespace MundoPlay
             String sql2;
             string aspas = "'";
 
+            if (ckbDestaqueNoticia.Checked)
+            {
+                destacarNoticia = "on";
+            }
+            else
+            {
+                destacarNoticia = "off";
+            }
+
+            //Abrir conexão para o proximo insert relacionado
+
+            //convert item to string
+            string checkedItemRelac = comboBox1.SelectedItem.ToString();
+            string relac = checkedItemRelac.Substring(0, 2);
+
 
             //Criando a string de inserção da notícia
-            sql = "INSERT INTO noticias (tituloNoticia,subtitulo,texto,dataPost,horaPost,img,destaque,imgDestaque)";
+            sql = "INSERT INTO noticias (tituloNoticia,subtitulo,texto,dataPost,horaPost,img,destaque,imgDestaque,relacionado)";
             sql = sql + "VALUES (";
             sql = sql + aspas + txtTituloNoticia.Text + aspas + ",";
             sql = sql + aspas + txtSubtituloNoticia.Text + aspas + ",";
@@ -880,7 +735,8 @@ namespace MundoPlay
             sql = sql + aspas + hora + aspas + ",";
             sql = sql + aspas + nomeFoto + aspas + ",";
             sql = sql + aspas + destacarNoticia + aspas + ",";
-            sql = sql + aspas + nomeFotoDestaque;
+            sql = sql + aspas + nomeFotoDestaque + aspas + ",";
+            sql = sql + aspas + relac;
             sql = sql + aspas + ")";
 
 
@@ -1208,6 +1064,52 @@ namespace MundoPlay
             }
 
             conn.Close();
+        }
+
+        private void carregarFilmes(object sender, EventArgs e)
+        {
+
+            if (checkBox1.Checked)
+            {
+
+                tipoMidia = "1";
+
+                conectar();
+                // conectando com o banco 
+                SqlConnection conn = new SqlConnection(conexao);
+
+
+                string relacionado = @"SELECT * FROM filmes";
+
+                SqlCommand cmd2 = new SqlCommand(relacionado, conn);
+
+                conn.Open();
+
+                SqlDataReader rdr2 = cmd2.ExecuteReader();
+
+
+                comboBox1.Items.Clear();
+
+                while (rdr2.Read())
+
+                {
+
+                    comboBox1.Items.Add(rdr2["idfilmes"] + " - " + rdr2["titulo"]);
+                }
+
+                conn.Close();
+
+            }
+            else
+            {
+                
+                comboBox1.Items.Clear();
+            }
+        }
+
+        private void picBoxNoticiaDestaque_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

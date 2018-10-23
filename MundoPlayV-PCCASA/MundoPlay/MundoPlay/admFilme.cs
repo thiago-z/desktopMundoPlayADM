@@ -14,7 +14,8 @@ namespace MundoPlay
     public partial class admFilme : Form
     {
         String urlPoster = "C:/Users/storn/Documents/GitHub/desktopMundoPlayADM/MundoPlayV-PCCASA/MundoPlay/imagens/posters/";
-                           
+        String urlFoto = "C:/Users/storn/Documents/Github/desktopMundoPlayADM/MundoPlayV-PCCASA/MundoPlay/imagens/usuarios/";
+
         //variáveis globais
         String conexao;
         private void conectar()
@@ -33,7 +34,23 @@ namespace MundoPlay
 
         private void admFilme_Load(object sender, EventArgs e)
         {
-           
+
+            String admOK = Program.admUsuario;
+
+            if (admOK == "1")
+            {
+                admUserLogado.Text = Program.privilegioADM;
+            }
+            else
+            {
+                admUserLogado.Text = "Commun";
+            }
+
+
+            nomeUserLogado.Text = MundoPlay.Program.nomeUsuario;
+            fotoUserLogado.ImageLocation = urlFoto + MundoPlay.Program.fotoUsuario;
+
+
 
             //Carrega no gridview os filmes cadastrados
 
@@ -81,91 +98,6 @@ namespace MundoPlay
             Close();
         }
 
-        
-
-        private void carregarFilmeAdm(object sender, DataGridViewCellEventArgs e)
-        {
-            
-
-            if (dgvConsultaFilmes.CurrentRow.Cells[0].Value != null)
-
-            {
-                lblIdFilme.Text =
-                dgvConsultaFilmes.CurrentRow.Cells[0].Value.ToString();
-                txtTituloFilme.Text =
-                   dgvConsultaFilmes.CurrentRow.Cells[1].Value.ToString();
-                txtSubtituloFilme.Text =
-                    dgvConsultaFilmes.CurrentRow.Cells[2].Value.ToString();
-                txtElencoFilme.Text =
-                    dgvConsultaFilmes.CurrentRow.Cells[3].Value.ToString();
-                txtSinopseFilme.Text =
-                    dgvConsultaFilmes.CurrentRow.Cells[4].Value.ToString();
-                msktxtDuracaoFilme.Text =
-                    dgvConsultaFilmes.CurrentRow.Cells[5].Value.ToString();
-
-
-                lblNomeFoto.Text =
-                    dgvConsultaFilmes.CurrentRow.Cells[6].Value.ToString();
-                picBoxFilmeSelec.ImageLocation = urlPoster + lblNomeFoto.Text;
-
-
-                txtURLFilme.Text =
-                    dgvConsultaFilmes.CurrentRow.Cells[7].Value.ToString();
-                lblValidar.Text =
-                    dgvConsultaFilmes.CurrentRow.Cells[8].Value.ToString();
-
-                if(lblValidar.Text == "off")
-                {
-                    btnDesvalidarFilme.Visible = false;
-                    btnValidarFilme.Visible = true;
-                }
-                else if(lblValidar.Text == "on")
-                {
-                    btnDesvalidarFilme.Visible = true;
-                    btnValidarFilme.Visible = false;
-                }
-
-
-                conectar();
-                // conectando com o banco 
-                SqlConnection conn = new SqlConnection(conexao);
-                // abrindo conexão
-                conn.Open();
-
-                String idfilme = lblIdFilme.Text;
-
-                //Puxa os generos em filmes
-                string generos = @"SELECT * FROM filmes
-                                INNER JOIN filme_genero
-                                ON
-                                filmes.idfilmes = filme_genero.filme 
-                                INNER JOIN generos
-                                ON
-                                filme_genero.genero = generos.idgeneros
-                                where filme = "+ idfilme;
-
-                SqlCommand cmd2 = new SqlCommand(generos, conn);
-
-                SqlDataReader rdr2 = cmd2.ExecuteReader();
-
-                while (rdr2.Read())
-
-                {
-
-                    lblGenerosFilme.Text = (rdr2["nomegenero"].ToString());
-                }
-
-                
-
-                conn.Close();
-                rdr2.Close();
-
-
-
-
-
-            }
-        }
 
         private void btnDesvalidarFilme_Click(object sender, EventArgs e)
         {
@@ -267,7 +199,62 @@ namespace MundoPlay
             }
         }
 
-     
+        private void lblGenerosFilme_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void carregarFilmeAdm1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvConsultaFilmes.CurrentRow.Cells[0].Value != null)
+
+            {
+                lblIdFilme.Text =
+                dgvConsultaFilmes.CurrentRow.Cells[0].Value.ToString();
+                txtTituloFilme.Text =
+                   dgvConsultaFilmes.CurrentRow.Cells[1].Value.ToString();
+                txtSubtituloFilme.Text =
+                    dgvConsultaFilmes.CurrentRow.Cells[2].Value.ToString();
+                txtElencoFilme.Text =
+                    dgvConsultaFilmes.CurrentRow.Cells[3].Value.ToString();
+                txtSinopseFilme.Text =
+                    dgvConsultaFilmes.CurrentRow.Cells[4].Value.ToString();
+                msktxtDuracaoFilme.Text =
+                    dgvConsultaFilmes.CurrentRow.Cells[5].Value.ToString();
+
+
+                lblNomeFoto.Text =
+                    dgvConsultaFilmes.CurrentRow.Cells[6].Value.ToString();
+                picBoxFilmeSelec.ImageLocation = urlPoster + lblNomeFoto.Text;
+
+
+                txtURLFilme.Text =
+                    dgvConsultaFilmes.CurrentRow.Cells[7].Value.ToString();
+                lblValidar.Text =
+                    dgvConsultaFilmes.CurrentRow.Cells[8].Value.ToString();
+
+                if (lblValidar.Text == "off")
+                {
+                    btnDesvalidarFilme.Visible = false;
+                    btnValidarFilme.Visible = true;
+                }
+                else if (lblValidar.Text == "on")
+                {
+                    btnDesvalidarFilme.Visible = true;
+                    btnValidarFilme.Visible = false;
+                }
+
+
+                conectar();
+                // conectando com o banco 
+                SqlConnection conn = new SqlConnection(conexao);
+                // abrindo conexão
+                conn.Open();
+
+                String idfilme;
+
+            }
+        }
     }
     
 }

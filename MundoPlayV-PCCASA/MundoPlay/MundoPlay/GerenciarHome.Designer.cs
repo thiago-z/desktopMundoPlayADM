@@ -42,12 +42,12 @@
             this.btnAdmUsuarios = new System.Windows.Forms.Button();
             this.btnAdmNoticias = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.lblAdmTitulos = new System.Windows.Forms.Label();
+            this.btnAdmFilme = new System.Windows.Forms.Button();
             this.btnAdmGame = new System.Windows.Forms.Button();
             this.btnAdmSerie = new System.Windows.Forms.Button();
-            this.btnAdmFilme = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUserLogado)).BeginInit();
@@ -74,7 +74,7 @@
             this.panel2.Controls.Add(this.nomeUserLogado);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.fotoUserLogado);
-            this.panel2.Location = new System.Drawing.Point(526, 3);
+            this.panel2.Location = new System.Drawing.Point(527, 3);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 57);
@@ -164,7 +164,7 @@
             // 
             // btnAdmTitulos
             // 
-            this.btnAdmTitulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdmTitulos.BackColor = System.Drawing.Color.SlateGray;
             this.btnAdmTitulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmTitulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmTitulos.ForeColor = System.Drawing.Color.White;
@@ -182,7 +182,7 @@
             // 
             // btnAdmUsuarios
             // 
-            this.btnAdmUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdmUsuarios.BackColor = System.Drawing.Color.SlateGray;
             this.btnAdmUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmUsuarios.ForeColor = System.Drawing.Color.White;
@@ -200,7 +200,7 @@
             // 
             // btnAdmNoticias
             // 
-            this.btnAdmNoticias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdmNoticias.BackColor = System.Drawing.Color.SlateGray;
             this.btnAdmNoticias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmNoticias.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmNoticias.ForeColor = System.Drawing.Color.White;
@@ -229,6 +229,17 @@
             this.panel3.Size = new System.Drawing.Size(594, 360);
             this.panel3.TabIndex = 11;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lblAdmTitulos);
+            this.panel4.Controls.Add(this.btnAdmFilme);
+            this.panel4.Controls.Add(this.btnAdmGame);
+            this.panel4.Controls.Add(this.btnAdmSerie);
+            this.panel4.Location = new System.Drawing.Point(163, 87);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(418, 121);
+            this.panel4.TabIndex = 6;
+            // 
             // lblAdmTitulos
             // 
             this.lblAdmTitulos.AutoSize = true;
@@ -240,6 +251,24 @@
             this.lblAdmTitulos.TabIndex = 9;
             this.lblAdmTitulos.Text = "Escolha o que gerenciar";
             this.lblAdmTitulos.Visible = false;
+            // 
+            // btnAdmFilme
+            // 
+            this.btnAdmFilme.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAdmFilme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmFilme.ForeColor = System.Drawing.Color.White;
+            this.btnAdmFilme.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmFilme.Image")));
+            this.btnAdmFilme.Location = new System.Drawing.Point(6, 41);
+            this.btnAdmFilme.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdmFilme.Name = "btnAdmFilme";
+            this.btnAdmFilme.Size = new System.Drawing.Size(130, 70);
+            this.btnAdmFilme.TabIndex = 6;
+            this.btnAdmFilme.Text = "FILMES";
+            this.btnAdmFilme.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAdmFilme.UseVisualStyleBackColor = false;
+            this.btnAdmFilme.Visible = false;
+            this.btnAdmFilme.Click += new System.EventHandler(this.btnAdmFilme_Click);
             // 
             // btnAdmGame
             // 
@@ -275,24 +304,6 @@
             this.btnAdmSerie.UseVisualStyleBackColor = false;
             this.btnAdmSerie.Visible = false;
             // 
-            // btnAdmFilme
-            // 
-            this.btnAdmFilme.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAdmFilme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmFilme.ForeColor = System.Drawing.Color.White;
-            this.btnAdmFilme.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmFilme.Image")));
-            this.btnAdmFilme.Location = new System.Drawing.Point(6, 41);
-            this.btnAdmFilme.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdmFilme.Name = "btnAdmFilme";
-            this.btnAdmFilme.Size = new System.Drawing.Size(130, 70);
-            this.btnAdmFilme.TabIndex = 6;
-            this.btnAdmFilme.Text = "FILMES";
-            this.btnAdmFilme.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAdmFilme.UseVisualStyleBackColor = false;
-            this.btnAdmFilme.Visible = false;
-            this.btnAdmFilme.Click += new System.EventHandler(this.btnAdmFilme_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -304,17 +315,6 @@
             this.label2.Size = new System.Drawing.Size(392, 33);
             this.label2.TabIndex = 12;
             this.label2.Text = "PAINEL ADMINISTRATIVO";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.lblAdmTitulos);
-            this.panel4.Controls.Add(this.btnAdmFilme);
-            this.panel4.Controls.Add(this.btnAdmGame);
-            this.panel4.Controls.Add(this.btnAdmSerie);
-            this.panel4.Location = new System.Drawing.Point(163, 87);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(418, 121);
-            this.panel4.TabIndex = 6;
             // 
             // GerenciarHome
             // 

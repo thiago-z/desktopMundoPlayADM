@@ -72,7 +72,7 @@
             this.panel2.Controls.Add(this.nomeUserLogado);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.fotoUserLogado);
-            this.panel2.Location = new System.Drawing.Point(527, 4);
+            this.panel2.Location = new System.Drawing.Point(527, 3);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 57);

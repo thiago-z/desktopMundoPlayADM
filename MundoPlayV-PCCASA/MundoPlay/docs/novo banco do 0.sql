@@ -398,6 +398,16 @@ CREATE TABLE noticia_evento (
 )
 
 
+-- Tabela associativa mídias e notícias
+
+CREATE TABLE noticia_midia (
+  noticia int,
+  midia int
+  PRIMARY KEY (noticia, midia),
+  FOREIGN KEY (noticia) REFERENCES noticias(idnoticias) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (midia) REFERENCES midias(idmidias) ON DELETE CASCADE ON UPDATE CASCADE
+)
+
 
 -- INSERTS
 
